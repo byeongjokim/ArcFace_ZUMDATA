@@ -113,21 +113,24 @@ if __name__ == '__main__':
             save_model(model, opt.checkpoints_path, opt.backbone, i)
         
         if i % opt.eval_interval == 0:
-            model.eval()
-            total_acc = 0
-            for ii, data in enumerate(evalloader):
-                data_input, label = data
-                data_input = data_input.to(device)
-                label = label.to(device).long()
-                feature = model(data_input)
-                output = metric_fc(feature, label)
+            with torch.no_grad():
+                model.eval()
+                total_acc = 0
+                total_num = 0
+                for ii, data in enumerate(evalloader):
+                    data_input, label = data
+                    data_input = data_input.to(device)
+                    label = label.to(device).long()
+                    feature = model(data_input)
+                    output = metric_fc(feature, label)
 
-                output = output.data.cpu().numpy()
-                output = np.argmax(output, axis=1)
-                label = label.data.cpu().numpy()
+                    output = output.data.cpu().numpy()
+                    output = np.argmax(output, axis=1)
+                    label = label.data.cpu().numpy()
 
-                acc = np.mean((output == label).astype(int))
+                    acc = np.mean((output == label).astype(int))
 
-                total_acc += acc * label.shape[0]
+                    total_num += label.shape[0]
+                    total_acc += acc * label.shape[0]
 
-            print('[eval] epoch {} acc {}'.format(i, total_acc))
+            print('[eval] epoch {} acc {}'.format(i, total_acc/total_num))
