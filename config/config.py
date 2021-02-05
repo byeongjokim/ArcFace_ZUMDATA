@@ -8,7 +8,8 @@ class Config(object):
     use_se = False
     loss = 'focal_loss'
 
-    train_root = '/home/kbj/projects/similar_celeb/train_face_img/'
+    train_root = '/home/kbj/projects/arcface-pytorch/train_face_img/'
+    val_root = '/home/kbj/projects/arcface-pytorch/test_face_img/'
 
     test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
     test_list = 'test.txt'

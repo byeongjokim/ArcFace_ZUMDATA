@@ -35,12 +35,14 @@ if __name__ == '__main__':
                                   batch_size=opt.batch_size,
                                   shuffle=True,
                                   num_workers=opt.num_workers)
+    print("{} train dataset".format(len(train_dataset)))
 
-    eval_dataset = ZumDataset(opt.train_root, phase='eval', input_shape=opt.input_shape)
-    trainloader = data.DataLoader(eval_dataset,
+    eval_dataset = ZumDataset(opt.val_root, phase='eval', input_shape=opt.input_shape, classes=train_dataset.classes)
+    evalloader = data.DataLoader(eval_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=False,
                                   num_workers=opt.num_workers)
+    print("{} eval dataset".format(len(eval_dataset)))
 
     print('{} train iters per epoch:'.format(len(trainloader)))
 
@@ -110,7 +112,7 @@ if __name__ == '__main__':
         if i % opt.save_interval == 0 or i == opt.max_epoch:
             save_model(model, opt.checkpoints_path, opt.backbone, i)
         
-        if i % otp.eval_interval == 0:
+        if i % opt.eval_interval == 0:
             model.eval()
             total_acc = 0
             for ii, data in enumerate(evalloader):
