@@ -8,9 +8,6 @@ class Config(object):
     use_se = False
     loss = 'focal_loss'
 
-    display = False
-    finetune = False
-
     train_root = '/home/kbj/projects/similar_celeb/train_face_img/'
 
     test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
@@ -20,10 +17,11 @@ class Config(object):
     checkpoints_path = 'checkpoints'
     load_model_path = 'models/resnet18.pth'
     test_model_path = 'checkpoints/resnet18_110.pth'
+    
     save_interval = 10
+    eval_interval = 10
 
-    train_batch_size = 64  # batch size
-    test_batch_size = 60
+    batch_size = 64 
 
     input_shape = (1, 128, 128)
 

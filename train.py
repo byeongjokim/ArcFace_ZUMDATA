@@ -6,7 +6,6 @@ from torch.utils import data
 import torch.nn.functional as F
 from models import *
 import torchvision
-# from utils import Visualizer, view_model
 import torch
 import numpy as np
 import random
@@ -19,10 +18,12 @@ from test import *
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 def save_model(model, save_path, name, iter_cnt):
+    if not os.path.isdir(save_path):
+        os.mkdir(save_path)
+
     save_name = os.path.join(save_path, name + '_' + str(iter_cnt) + '.pth')
     torch.save(model.state_dict(), save_name)
     return save_name
-
 
 if __name__ == '__main__':
 
@@ -31,8 +32,14 @@ if __name__ == '__main__':
 
     train_dataset = ZumDataset(opt.train_root, phase='train', input_shape=opt.input_shape)
     trainloader = data.DataLoader(train_dataset,
-                                  batch_size=opt.train_batch_size,
+                                  batch_size=opt.batch_size,
                                   shuffle=True,
+                                  num_workers=opt.num_workers)
+
+    eval_dataset = ZumDataset(opt.train_root, phase='eval', input_shape=opt.input_shape)
+    trainloader = data.DataLoader(eval_dataset,
+                                  batch_size=opt.batch_size,
+                                  shuffle=False,
                                   num_workers=opt.num_workers)
 
     print('{} train iters per epoch:'.format(len(trainloader)))
@@ -96,9 +103,29 @@ if __name__ == '__main__':
                 acc = np.mean((output == label).astype(int))
                 speed = opt.print_freq / (time.time() - start)
                 time_str = time.asctime(time.localtime(time.time()))
-                print('{} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, ii, speed, loss.item(), acc))
+                print('[train] {} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, ii, speed, loss.item(), acc))
 
                 start = time.time()
 
         if i % opt.save_interval == 0 or i == opt.max_epoch:
             save_model(model, opt.checkpoints_path, opt.backbone, i)
+        
+        if i % otp.eval_interval == 0:
+            model.eval()
+            total_acc = 0
+            for ii, data in enumerate(evalloader):
+                data_input, label = data
+                data_input = data_input.to(device)
+                label = label.to(device).long()
+                feature = model(data_input)
+                output = metric_fc(feature, label)
+
+                output = output.data.cpu().numpy()
+                output = np.argmax(output, axis=1)
+                label = label.data.cpu().numpy()
+
+                acc = np.mean((output == label).astype(int))
+
+                total_acc += acc * label.shape[0]
+
+            print('[eval] epoch {} acc {}'.format(i, total_acc))
