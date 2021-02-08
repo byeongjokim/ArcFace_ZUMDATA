@@ -1,6 +1,6 @@
 class Config(object):
     env = 'default'
-    backbone = 'resnet18'
+    backbone = 'resnet50'
     classify = 'softmax'
     num_classes = 619
     metric = 'arc_margin'
@@ -8,11 +8,11 @@ class Config(object):
     use_se = False
     loss = 'focal_loss'
 
-    train_root = '/home/kbj/projects/similar_celeb/train_face_img/'
-
-    test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
-    test_list = 'test.txt'
-
+    train_root = '/home/kbj/projects/similar_celeb/ZUM/'
+    train_file_list = '/home/kbj/projects/similar_celeb/ZUM/train.txt'
+    
+    val_root = '/home/kbj/projects/similar_celeb/ZUM/'
+    val_file_list = '/home/kbj/projects/similar_celeb/ZUM/train.txt'
 
     checkpoints_path = 'checkpoints'
     load_model_path = 'models/resnet18.pth'

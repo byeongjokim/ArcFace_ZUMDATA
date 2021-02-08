@@ -1,6 +1,6 @@
 from __future__ import print_function
 import os
-from data import Dataset, ZumDataset
+from data import Dataset, ZumDataset, ZUM
 import torch
 from torch.utils import data
 import torch.nn.functional as F
@@ -30,17 +30,19 @@ if __name__ == '__main__':
     opt = Config()
     device = torch.device("cuda")
 
-    train_dataset = ZumDataset(opt.train_root, phase='train', input_shape=opt.input_shape)
+    train_dataset = ZUM(opt.train_root, opp.train_file_list, class_nums=opt.num_classes)
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=True,
-                                  num_workers=opt.num_workers)
-
-    eval_dataset = ZumDataset(opt.train_root, phase='eval', input_shape=opt.input_shape)
-    trainloader = data.DataLoader(eval_dataset,
+                                  num_workers=opt.num_workers,
+                                  drop_last=False)
+                                  
+    eval_dataset = ZUM(opt.train_root, opp.train_file_list, class_nums=opt.num_classes)
+    evalloader = data.DataLoader(eval_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=False,
-                                  num_workers=opt.num_workers)
+                                  num_workers=opt.num_workers,
+                                  drop_last=False)
 
     print('{} train iters per epoch:'.format(len(trainloader)))
 
@@ -54,7 +56,7 @@ if __name__ == '__main__':
     elif opt.backbone == 'resnet34':
         model = resnet34()
     elif opt.backbone == 'resnet50':
-        model = resnet50()
+        model = CBAMResNet(50, feature_dim=512, mode='ir')
 
     if opt.metric == 'add_margin':
         metric_fc = AddMarginProduct(512, opt.num_classes, s=30, m=0.35)
