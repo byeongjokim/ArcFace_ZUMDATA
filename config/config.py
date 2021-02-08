@@ -8,11 +8,11 @@ class Config(object):
     use_se = False
     loss = 'focal_loss'
 
-    train_root = '/home/kbj/projects/arcface-pytorch/train_face_img/'
-    val_root = '/home/kbj/projects/arcface-pytorch/test_face_img/'
+    train_root = '/home/kbj/projects/arcface-pytorch/ZUM/'
+    train_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
 
-    test_root = '/data1/Datasets/anti-spoofing/test/data_align_256'
-    test_list = 'test.txt'
+    val_root = '/home/kbj/projects/arcface-pytorch/ZUM/'
+    val_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
 
     checkpoints_path = 'checkpoints'
     load_model_path = 'models/resnet18.pth'
