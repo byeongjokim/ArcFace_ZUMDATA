@@ -12,7 +12,7 @@ class Config(object):
     train_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
 
     val_root = '/home/kbj/projects/arcface-pytorch/ZUM/'
-    val_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
+    val_list = '/home/kbj/projects/arcface-pytorch/ZUM/val.txt'
 
     checkpoints_path = 'checkpoints'
     load_model_path = 'models/resnet18.pth'
@@ -21,7 +21,7 @@ class Config(object):
     save_interval = 10
     eval_interval = 10
 
-    batch_size = 32 
+    batch_size = 64
 
     input_shape = (1, 128, 128)
 

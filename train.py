@@ -30,14 +30,14 @@ if __name__ == '__main__':
     opt = Config()
     device = torch.device("cuda")
 
-    train_dataset = ZUM(opt.train_root, opp.train_list, class_nums=opt.num_classes)
+    train_dataset = ZUM(opt.train_root, opt.train_list, class_nums=opt.num_classes)
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=True,
                                   num_workers=opt.num_workers,
                                   drop_last=False)
                                   
-    eval_dataset = ZUM(opt.val_root, opp.val_list, class_nums=opt.num_classes)
+    eval_dataset = ZUM(opt.val_root, opt.val_list, class_nums=opt.num_classes)
     evalloader = data.DataLoader(eval_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=False,
