@@ -34,15 +34,15 @@ if __name__ == '__main__':
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=True,
-                                  num_workers=opt.num_workers,
-                                  drop_last=False)
-                                  
-    eval_dataset = ZUM(opt.train_root, opp.train_file_list, class_nums=opt.num_classes)
+                                  num_workers=opt.num_workers)
+    print("{} train dataset".format(len(train_dataset)))
+
+    eval_dataset = ZumDataset(opt.val_root, phase='eval', input_shape=opt.input_shape, classes=train_dataset.classes)
     evalloader = data.DataLoader(eval_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=False,
-                                  num_workers=opt.num_workers,
-                                  drop_last=False)
+                                  num_workers=opt.num_workers)
+    print("{} eval dataset".format(len(eval_dataset)))
 
     print('{} train iters per epoch:'.format(len(trainloader)))
 
@@ -112,22 +112,25 @@ if __name__ == '__main__':
         if i % opt.save_interval == 0 or i == opt.max_epoch:
             save_model(model, opt.checkpoints_path, opt.backbone, i)
         
-        if i % otp.eval_interval == 0:
-            model.eval()
-            total_acc = 0
-            for ii, data in enumerate(evalloader):
-                data_input, label = data
-                data_input = data_input.to(device)
-                label = label.to(device).long()
-                feature = model(data_input)
-                output = metric_fc(feature, label)
+        if i % opt.eval_interval == 0:
+            with torch.no_grad():
+                model.eval()
+                total_acc = 0
+                total_num = 0
+                for ii, data in enumerate(evalloader):
+                    data_input, label = data
+                    data_input = data_input.to(device)
+                    label = label.to(device).long()
+                    feature = model(data_input)
+                    output = metric_fc(feature, label)
 
-                output = output.data.cpu().numpy()
-                output = np.argmax(output, axis=1)
-                label = label.data.cpu().numpy()
+                    output = output.data.cpu().numpy()
+                    output = np.argmax(output, axis=1)
+                    label = label.data.cpu().numpy()
 
-                acc = np.mean((output == label).astype(int))
+                    acc = np.mean((output == label).astype(int))
 
-                total_acc += acc * label.shape[0]
+                    total_num += label.shape[0]
+                    total_acc += acc * label.shape[0]
 
-            print('[eval] epoch {} acc {}'.format(i, total_acc))
+            print('[eval] epoch {} acc {}'.format(i, total_acc/total_num))

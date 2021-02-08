@@ -11,15 +11,19 @@ import glob
 
 class ZumDataset(data.Dataset):
 
-    def __init__(self, root, phase='train', input_shape=(1, 128, 128)):
+    def __init__(self, root, phase='train', input_shape=(1, 128, 128), classes=None):
         self.phase = phase
         self.input_shape = input_shape
 
         imgs = glob.glob(os.path.join(root, "*/*.png"))
         labels = [i.split("/")[-2] for i in imgs]
-        classes = list(set(labels))
+    
+        if not classes:
+            self.classes = list(set(labels))
+        else:
+            self.classes = classes
         
-        self.data = [{"imgs": i, "labels": classes.index(j)} for i, j in zip(imgs, labels)]
+        self.data = [{"imgs": i, "labels": self.classes.index(j)} for i, j in zip(imgs, labels)]
 
         normalize = T.Normalize(mean=[0.5], std=[0.5])
 
