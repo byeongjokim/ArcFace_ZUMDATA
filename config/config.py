@@ -1,6 +1,6 @@
 class Config(object):
     env = 'default'
-    backbone = 'resnet18'
+    backbone = 'resnet50'
     classify = 'softmax'
     num_classes = 619
     metric = 'arc_margin'
@@ -22,7 +22,7 @@ class Config(object):
     save_interval = 10
     eval_interval = 10
 
-    batch_size = 64 
+    batch_size = 32 
 
     input_shape = (1, 128, 128)
 
@@ -33,7 +33,7 @@ class Config(object):
     num_workers = 4  # how many workers for loading data
     print_freq = 100  # print info every N batch
 
-    max_epoch = 50
+    max_epoch = 200
     lr = 1e-1  # initial learning rate
     lr_step = 10
     lr_decay = 0.95  # when val_loss increase, lr = lr*lr_decay
