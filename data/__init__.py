@@ -1,3 +1,2 @@
-from .dataset import Dataset
-from .zum import ZumDataset
-from .zum1 import ZUM
+from .zum import ZUM
+from .v_zum import V_ZUM

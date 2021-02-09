@@ -1,79 +1,80 @@
-import os
-from PIL import Image
-import torch
-from torch.utils import data
+#!/usr/bin/env python
+# encoding: utf-8
+'''
+@author: byeongjokim
+@contact: 
+@file: zum.py
+@time: 2021/02/08 19:09
+@desc: ZUM dataset loader
+'''
+
+import torchvision.transforms as transforms
+import torch.utils.data as data
 import numpy as np
-from torchvision import transforms as T
-import torchvision
 import cv2
-import sys
-import glob
+import os
+import torch
 
-class ZumDataset(data.Dataset):
 
-    def __init__(self, root, phase='train', input_shape=(1, 128, 128), classes=None):
-        self.phase = phase
-        self.input_shape = input_shape
+def img_loader(path):
+    try:
+        with open(path, 'rb') as f:
+            img = cv2.imread(path)
+            if len(img.shape) == 2:
+                img = np.stack([img] * 3, 2)
+            img = cv2.resize(img, (112, 112))
+            return img
+    except IOError:
+        print('Cannot load image ' + path)
 
-        imgs = glob.glob(os.path.join(root, "*/*.png"))
-        labels = [i.split("/")[-2] for i in imgs]
-    
-        if not classes:
-            self.classes = list(set(labels))
-        else:
-            self.classes = classes
+
+class ZUM(data.Dataset):
+    def __init__(self, root, file_list, loader=img_loader, class_nums=None):
+
+        self.root = root
+
+        self.transform = transforms.Compose([
+            transforms.ToTensor(),  # range [0, 255] -> [0.0,1.0]
+            transforms.Normalize(mean=(0.5, 0.5, 0.5), std=(0.5, 0.5, 0.5))  # range [0.0, 1.0] -> [-1.0,1.0]
+        ])
+
+        self.loader = loader
+
+        image_list = []
+        label_list = []
+        with open(file_list) as f:
+            img_label_list = f.read().splitlines()
+        for info in img_label_list:
+            image_path, label_name = info.split(' ')
+            image_list.append(image_path)
+            label_list.append(int(label_name))
+
+        self.image_list = image_list
+        self.label_list = label_list
         
-        self.data = [{"imgs": i, "labels": self.classes.index(j)} for i, j in zip(imgs, labels)]
-
-        normalize = T.Normalize(mean=[0.5], std=[0.5])
-
-        if self.phase == 'train':
-            self.transforms = T.Compose([
-                T.ToPILImage(),
-                T.RandomHorizontalFlip(),
-                T.ToTensor(),
-                normalize
-            ])
+        if not class_nums:
+            self.class_nums = len(np.unique(self.label_list))
         else:
-            self.transforms = T.Compose([
-                T.ToPILImage(),
-                T.ToTensor(),
-                normalize
-            ])
+            self.class_nums = class_nums
+        print("dataset size: ", len(self.image_list), '/', self.class_nums)
 
     def __getitem__(self, index):
-        d = self.data[index]
-        
-        img = d["imgs"]
-        label = d["labels"]
-        
-        data = Image.open(img)
-        data = data.convert('L')
-        
-        data = cv2.imread(img)
-        data = cv2.resize(data, (self.input_shape[1:]))
-        data = cv2.cvtColor(data, cv2.COLOR_BGR2GRAY)
+        img_path = self.image_list[index]
+        label = self.label_list[index]
 
-        data = self.transforms(data)
-        
-        label = np.int32(label)
-        
-        return data.float(), label
+        img = self.loader(os.path.join(self.root, img_path))
+
+        # random flip with ratio of 0.5
+        flip = np.random.choice(2) * 2 - 1
+        if flip == 1:
+            img = cv2.flip(img, 1)
+
+        if self.transform is not None:
+            img = self.transform(img)
+        else:
+            img = torch.from_numpy(img)
+
+        return img, label
 
     def __len__(self):
-        return len(self.data)
-
-
-if __name__ == '__main__':
-    dataset = Dataset(root="/home/kbj/projects/similar_celeb/train_face_img/",
-                      phase='train',
-                      input_shape=(1, 128, 128))
-
-    trainloader = data.DataLoader(dataset, batch_size=10)
-    for i, (img, label) in enumerate(trainloader):
-        print(img.shape)
-        print(type(img))
-        
-        print(label.shape)
-        print(type(label))
-        break
+        return len(self.image_list)

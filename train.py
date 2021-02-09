@@ -1,19 +1,20 @@
 from __future__ import print_function
+
 import os
-from data import Dataset, ZumDataset, ZUM
+import time
+
+import numpy as np
 import torch
 from torch.utils import data
 import torch.nn.functional as F
-from models import *
-import torchvision
-import torch
-import numpy as np
-import random
-import time
-from config import Config
 from torch.nn import DataParallel
 from torch.optim.lr_scheduler import StepLR
+
+from data import ZUM
+from models import *
 from test import *
+
+from config import Config
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
@@ -37,46 +38,28 @@ if __name__ == '__main__':
                                   num_workers=opt.num_workers,
                                   drop_last=False)
                                   
-    eval_dataset = ZUM(opt.val_root, opt.val_list, class_nums=opt.num_classes)
-    evalloader = data.DataLoader(eval_dataset,
-                                  batch_size=opt.batch_size,
-                                  shuffle=False,
-                                  num_workers=opt.num_workers,
-                                  drop_last=False)
+    identity_list = get_zum_list(opt.val_list)
+    img_paths = [os.path.join(opt.val_root, each) for each in identity_list]
 
     print('{} train iters per epoch:'.format(len(trainloader)))
 
-    if opt.loss == 'focal_loss':
-        criterion = FocalLoss(gamma=2)
-    else:
-        criterion = torch.nn.CrossEntropyLoss()
+    
+    criterion = FocalLoss(gamma=2)
+    # criterion = torch.nn.CrossEntropyLoss()
 
-    if opt.backbone == 'resnet18':
-        model = resnet_face18(use_se=opt.use_se)
-    elif opt.backbone == 'resnet34':
-        model = resnet34()
-    elif opt.backbone == 'resnet50':
-        model = CBAMResNet(50, feature_dim=512, mode='ir')
-
-    if opt.metric == 'add_margin':
-        metric_fc = AddMarginProduct(512, opt.num_classes, s=30, m=0.35)
-    elif opt.metric == 'arc_margin':
-        metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
-    elif opt.metric == 'sphere':
-        metric_fc = SphereProduct(512, opt.num_classes, m=4)
-    else:
-        metric_fc = nn.Linear(512, opt.num_classes)
+    model = CBAMResNet(50, feature_dim=512, mode='ir')
+    # model = resnet_face18(use_se=opt.use_se)
+    metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
 
     print(model)
     model.to(device)
     metric_fc.to(device)
 
-    if opt.optimizer == 'sgd':
-        optimizer = torch.optim.SGD([{'params': model.parameters()}, {'params': metric_fc.parameters()}],
-                                    lr=opt.lr, weight_decay=opt.weight_decay)
-    else:
-        optimizer = torch.optim.Adam([{'params': model.parameters()}, {'params': metric_fc.parameters()}],
-                                     lr=opt.lr, weight_decay=opt.weight_decay)
+    optimizer = torch.optim.SGD([{'params': model.parameters()}, {'params': metric_fc.parameters()}],
+                                lr=opt.lr, weight_decay=opt.weight_decay)
+    # optimizer = torch.optim.Adam([{'params': model.parameters()}, {'params': metric_fc.parameters()}],
+    #                                 lr=opt.lr, weight_decay=opt.weight_decay)
+
     scheduler = StepLR(optimizer, step_size=opt.lr_step, gamma=0.1)
 
     start = time.time()
@@ -86,11 +69,14 @@ if __name__ == '__main__':
         model.train()
         for ii, data in enumerate(trainloader):
             data_input, label = data
+
             data_input = data_input.to(device)
             label = label.to(device).long()
+
             feature = model(data_input)
             output = metric_fc(feature, label)
             loss = criterion(output, label)
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -105,6 +91,7 @@ if __name__ == '__main__':
                 acc = np.mean((output == label).astype(int))
                 speed = opt.print_freq / (time.time() - start)
                 time_str = time.asctime(time.localtime(time.time()))
+
                 print('[train] {} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, ii, speed, loss.item(), acc))
 
                 start = time.time()
@@ -115,22 +102,6 @@ if __name__ == '__main__':
         if i % opt.eval_interval == 0:
             with torch.no_grad():
                 model.eval()
-                total_acc = 0
-                total_num = 0
-                for ii, data in enumerate(evalloader):
-                    data_input, label = data
-                    data_input = data_input.to(device)
-                    label = label.to(device).long()
-                    feature = model(data_input)
-                    output = metric_fc(feature, label)
+                acc = zum_test(model, img_paths, identity_list, opt.val_list, opt.val_batch_size)
 
-                    output = output.data.cpu().numpy()
-                    output = np.argmax(output, axis=1)
-                    label = label.data.cpu().numpy()
-
-                    acc = np.mean((output == label).astype(int))
-
-                    total_num += label.shape[0]
-                    total_acc += acc * label.shape[0]
-
-            print('[eval] epoch {} acc {}'.format(i, total_acc/total_num))
+            print('[eval] epoch {} acc {}'.format(i, acc))
