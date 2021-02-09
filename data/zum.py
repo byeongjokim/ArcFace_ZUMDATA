@@ -22,7 +22,7 @@ def img_loader(path):
             img = cv2.imread(path)
             if len(img.shape) == 2:
                 img = np.stack([img] * 3, 2)
-            img = cv2.resize(img, (112, 112))
+            # img = cv2.resize(img, (112, 112))
             return img
     except IOError:
         print('Cannot load image ' + path)

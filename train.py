@@ -16,7 +16,6 @@ from test import *
 
 from config import Config
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 def save_model(model, save_path, name, iter_cnt):
     if not os.path.isdir(save_path):
@@ -29,23 +28,24 @@ def save_model(model, save_path, name, iter_cnt):
 if __name__ == '__main__':
 
     opt = Config()
+    os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_id
     device = torch.device("cuda")
 
-    train_dataset = ZUM(opt.train_root, opt.train_list, class_nums=opt.num_classes)
+    train_dataset = ZUM(opt.root, opt.train_list, class_nums=opt.num_classes)
     trainloader = data.DataLoader(train_dataset,
                                   batch_size=opt.batch_size,
                                   shuffle=True,
                                   num_workers=opt.num_workers,
                                   drop_last=False)
                                   
-    identity_list = get_zum_list(opt.val_list)
-    img_paths = [os.path.join(opt.val_root, each) for each in identity_list]
+    identity_list = get_zum_list(opt.pair_list)
+    img_paths = [os.path.join(opt.root, each) for each in identity_list]
 
     print('{} train iters per epoch:'.format(len(trainloader)))
 
     
-    criterion = FocalLoss(gamma=2)
-    # criterion = torch.nn.CrossEntropyLoss()
+    # criterion = FocalLoss(gamma=2)
+    criterion = torch.nn.CrossEntropyLoss()
 
     model = CBAMResNet(50, feature_dim=512, mode='ir')
     # model = resnet_face18(use_se=opt.use_se)

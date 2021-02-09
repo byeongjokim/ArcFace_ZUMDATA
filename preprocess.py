@@ -1,7 +1,19 @@
+from config import Config
+
+import cv2
 import random
 from itertools import combinations
 
-def make_val_list(identity_list, pair_list, same_num=3, diff_num=2):
+def crop(origin_root, origin_json, train_list, val_list):
+    # crop and save and make list
+    print("")
+
+def align(root, input_shape):
+    # align cropped images(with reshape) and save
+    print("")
+
+def make_val_list(identity_list, pair_list, same_num, diff_num):
+    # make pair list using identitiy_list
     # img1 1
     # img2 2
     # img3 1
@@ -53,5 +65,12 @@ def make_val_list(identity_list, pair_list, same_num=3, diff_num=2):
         for pair in pairs:
             f.write("{} {} {}\n".format(pair[0], pair[1], pair[2]))
 
+
+
 if __name__ == '__main__':
-    make_val_list("val.txt", "pairs.txt")
+    opt = Config()
+
+    crop(opt.origin_root, opt.origin_json, opt.train_list, opt.val_list)
+    make_val_list(opt.val_list, opt.pair_list, opt.same_num, opt.diff_num)
+    align(opt.input_shape)
+
