@@ -8,6 +8,7 @@ class Config(object):
     origin_json = "/home/kbj/projects/arcface-pytorch/origin/"
 
     root = '/home/kbj/projects/arcface-pytorch/ZUM/'
+    total_list = '/home/kbj/projects/arcface-pytorch/ZUM/total.txt'
     train_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
     val_list = '/home/kbj/projects/arcface-pytorch/ZUM/val.txt'
     pair_list = '/home/kbj/projects/arcface-pytorch/ZUM/pair.txt'
