@@ -30,18 +30,22 @@ def parsing(origin_root, origin_json):
 
     return data, list(set(class_set))
 
-def crop(data, classes, data_root, total_list, pad=10):
+def crop(data, classes, data_root, total_list, train_list, val_list, pad=0):
 
     detector = MTCNN()
     align_model = AlignDlib.AlignDlib('')
 
-    txt = open(total_list, "w")
+    total_txt = open(total_list, "w")
+    train_txt = open(train_list, "w")
+    val_txt = open(val_list, "w")
 
-    idx = 0
+    celebs = {}
+
     # crop and save and make list
     for d in data:
         img_file = d[0]
         x, y, w, h = d[1]
+        label = classes.index(d[2])
 
         img = cv2.imread(img_file)
         
@@ -51,8 +55,6 @@ def crop(data, classes, data_root, total_list, pad=10):
         y2 = min(height, y + h + pad)
         x1 = max(0, x - pad)
         y1 = max(0, y - pad)
-
-        label = classes.index(d[2])
 
         img = img[x1:x2, y1:y2]
         rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -65,12 +67,32 @@ def crop(data, classes, data_root, total_list, pad=10):
 
             aligned_face = align(face, img)
 
-            cv2.imwrite(os.path.join(data_root, str(idx).zfill(10) + ".jpg"), aligned_face)    
-            txt.write("{} {}\n".format(str(idx).zfill(10) + ".jpg", str(label)))
+            cv2.imwrite(os.path.join(data_root, img_file), aligned_face)    
+            total_txt.write("{} {}\n".format(img_file, str(label)))
 
-            idx += 1 
+            try:
+                celebs[label].append(img_file)
+            except:
+                celebs[label] = [img_file]
+
+    train_celebs = {}
+    val_celebs = {}
+    for i in celebs:
+        random.shuffle(celebs[i])
+        train_celebs[i] = celebs[i][:-5]
+        val_celebs[i] = celebs[i][-5:]
     
-    txt.close()
+    for i in train_celebs:
+        for row in train_celebs[i]:
+            train_txt.write("{} {}\n".format(row, str(i)))
+
+    for i in val_celebs:
+        for row in val_celebs[i]:
+            val_txt.write("{} {}\n".format(row, str(i)))
+
+    total_txt.close()
+    train_txt.close()
+    val_txt.close()
 
 def align(face, img):
     feature = face['keypoints']
@@ -91,7 +113,6 @@ def align(face, img):
 
     return out
 
-def make_list(total_list, train_list, val_list)
 
 def make_pair_list(identity_list, pair_list, same_num, diff_num):
     # make pair list using identitiy_list
@@ -147,12 +168,12 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
             f.write("{} {} {}\n".format(pair[0], pair[1], pair[2]))
 
 
-
 if __name__ == '__main__':
     opt = Config()
 
     data, classes = parsing(opt.origin_root, opt.origin_json)
-    crop(data, classes, opt.root, opt.total_list):
 
-    make_list(opt.total_list, opt.train_list, opt.val_list)
+    print(len(data), len(classes))
+    crop(data, classes, opt.root, opt.total_list, opt.train_list, opt.val_list):
+
     make_pair_list(opt.val_list, opt.pair_list, opt.same_num, opt.diff_num)
