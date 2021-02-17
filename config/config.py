@@ -5,7 +5,8 @@ class Config(object):
     optimizer = 'sgd'
 
     origin_root = "/home/kbj/projects/arcface-pytorch/origin/"
-    origin_json = "/home/kbj/projects/arcface-pytorch/origin/"
+    inf_json = "/home/kbj/projects/arcface-pytorch/origin/"
+    mind_json = "/home/kbj/projects/arcface-pytorch/origin/"
 
     root = '/home/kbj/projects/arcface-pytorch/ZUM/'
     total_list = '/home/kbj/projects/arcface-pytorch/ZUM/total.txt'

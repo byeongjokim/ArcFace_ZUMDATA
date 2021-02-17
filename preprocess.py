@@ -9,9 +9,19 @@ from itertools import combinations
 import glob
 import json
 
-def parsing(origin_root, origin_json):
+def matching_inf(jpg_data, filename):
+    origin_filename = ""
+    return origin_filename
+
+def matching_mind(jpg_data, filename):
+    origin_filename = ""
+    return origin_filename
+
+def parsing_inf(origin_root, inf_json):
+    print("infinfinfinfinfinfinfinfinf")
     jpg_files = glob.glob(os.path.join(origin_root, "*/*.jpg"))
-    json_files = glob.glob(os.path.join(origin_json, "*/*.json"))
+    json_files = glob.glob(os.path.join(inf_json, "*/*.json"))
+    print(len(jpg_files), len(json_files))
 
     jpg_data = {i.split("/")[-1]:i for i in jpg_files}
 
@@ -25,12 +35,33 @@ def parsing(origin_root, origin_json):
         anns = json_data["annotations"]
 
         class_set += [ann["class"] for ann in anns]
-
-        data += [[jpg_data[filename], ann["box"], ann["class"]] for ann in anns]
-
+        data += [[matching_inf(jpg_files, filename), ann["box"], ann["class"]] for ann in anns]
+    print(len(data))
     return data, list(set(class_set))
 
-def crop(data, classes, data_root, total_list, train_list, val_list, pad=0):
+def parsing_mind(origin_root, mind_json):
+    print("mindmindmindmindmindmindmind")
+    jpg_files = glob.glob(os.path.join(origin_root, "*/*.jpg"))
+    json_files = glob.glob(os.path.join(inf_json, "*/*.json"))
+    print(len(jpg_files), len(json_files))
+
+    # jpg_data = {i.split("/")[-1]:i for i in jpg_files}
+
+    class_set = []
+    data = []
+    for json_file in json_files:
+        with open(json_file) as f:
+            json_data = json.load(f)
+        
+        images = {i["id"]:i["file_name"] for i in json_data["images"]}
+        face_cls = {i["id"]:i["name"] for i in json_data["categories"]["face"]}
+        
+        class_set += [i["name"] for i in json_data["categories"]["face"]]
+        data += [[matching_mind(jpg_files, images[ann["image_id"]]), face_cls[ann["face_id"]], ann["bbox"]] for ann in json_data["annotations"]["face"]]
+    print(len(data))
+    return data, list(set(class_set))
+
+def crop(data, classes, data_root, total_list, train_list, val_list, pad=20):
 
     detector = MTCNN()
     align_model = AlignDlib.AlignDlib('')
@@ -51,10 +82,10 @@ def crop(data, classes, data_root, total_list, train_list, val_list, pad=0):
         
         width, height, _ = rgb_img.shape
 
-        x2 = min(width, x + w + pad)
-        y2 = min(height, y + h + pad)
-        x1 = max(0, x - pad)
-        y1 = max(0, y - pad)
+        x2 = int(min(width, x + w + pad))
+        y2 = int(min(height, y + h + pad))
+        x1 = int(max(0, x - pad))
+        y1 = int(max(0, y - pad))
 
         img = img[x1:x2, y1:y2]
         rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -113,7 +144,6 @@ def align(face, img):
 
     return out
 
-
 def make_pair_list(identity_list, pair_list, same_num, diff_num):
     # make pair list using identitiy_list
     # img1 1
@@ -171,7 +201,11 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
 if __name__ == '__main__':
     opt = Config()
 
-    data, classes = parsing(opt.origin_root, opt.origin_json)
+    data1, classes1 = parsing_inf(opt.origin_root, opt.inf_json)
+    data2, classes2 = parsing_mind(opt.origin_root, opt.mind_json)
+    
+    data = data1 + data2
+    classes = list(set(classes1 + classes2))
 
     print(len(data), len(classes))
     crop(data, classes, opt.root, opt.total_list, opt.train_list, opt.val_list):
