@@ -234,10 +234,10 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
 if __name__ == '__main__':
     opt = Config()
 
-    data1, classes1 = parsing_inf("/home/kbj/projects/ZUMDATA/inf/객체")
+    data1, classes1 = parsing_inf(opt.inf_json)
     print(len(data1), len(classes1))
 
-    data2, classes2 = parsing_mind("./mind")
+    data2, classes2 = parsing_mind(opt.mind_json)
     print(len(data2), len(classes2))
 
     data = data1 + data2
