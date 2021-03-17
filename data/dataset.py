@@ -28,7 +28,7 @@ class Dataset(data.Dataset):
 
         if self.phase == 'train':
             self.transforms = T.Compose([
-                T.RandomCrop(self.input_shape[1:]),
+                T.CenterCrop(self.input_shape[1:]),
                 T.RandomHorizontalFlip(),
                 T.ToTensor(),
                 normalize
