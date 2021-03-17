@@ -8,60 +8,107 @@ from itertools import combinations
 
 import glob
 import json
+import os
 
-def matching_inf(jpg_data, filename):
-    origin_filename = ""
-    return origin_filename
+no_err = 0
+def matching_inf(filename):
+    global no_err
 
-def matching_mind(jpg_data, filename):
-    origin_filename = ""
-    return origin_filename
+    path = "/data/video/vod_tag01/bai/99/OBS"
+    path_2fs = "/data/video/vod_tag02/OBS_p0_v0~v49/Images"
+    
+    program, video, frame = filename.split("/")[-3:]
+    
+    if "_" in frame:
+        _, _, _, frame = frame.split("_")
+        
+    assert len(program) == 12
+    assert len(video) == 10
+    assert len(frame) == 15
+    
+    list_2fps = [
+        "video-"+str(i).zfill(4) for i in range(50)
+    ]
+    
+    if program == "program-0000" and video in list_2fps:
+        path = os.path.join(path_2fs, video, frame[:-5]+".png")
+    else:
+        path = os.path.join(path, program, "frames", video, frame[:-5]+".png")
+    
+    if os.path.isfile(path):
+        return path
+    else:
+        no_err += 1
+        print(path)
+        return False
+    
+def xywh2xyxy(xywh):
+    x, y, w, h = xywh
+    return [x, y, x+w, y+h]
 
-def parsing_inf(origin_root, inf_json):
+# def check_hangeul(string):
+#     return ord('가') <= ord(string[0]) and ord(string[0]) <= ord('힣')
+
+def parsing_inf(inf_json):
     print("infinfinfinfinfinfinfinfinf")
-    jpg_files = glob.glob(os.path.join(origin_root, "*/*.jpg"))
-    json_files = glob.glob(os.path.join(inf_json, "*/*.json"))
-    print(len(jpg_files), len(json_files))
-
-    jpg_data = {i.split("/")[-1]:i for i in jpg_files}
-
-    class_set = []
+    json_files = glob.glob(os.path.join(inf_json, "*/*/*.json"))
     data = []
     for json_file in json_files:
         with open(json_file) as f:
             json_data = json.load(f)
-        
-        filename = json_data["images"][0]["filename"]
-        anns = json_data["annotations"]
 
-        class_set += [ann["class"] for ann in anns]
-        data += [[matching_inf(jpg_files, filename), ann["box"], ann["class"]] for ann in anns]
-    print(len(data))
-    return data, list(set(class_set))
+        filename = json_data["images"][0]["filename"]
+        anns = json_data["annotations"]        
+        # anns = [ann for ann in anns if check_hangeul(ann["class"])]
+        
+        try:
+            data += [[matching_inf(json_file), xywh2xyxy(ann["box"]), ann["class"]] for ann in anns if matching_inf(json_file) and ann["class"] != "person"]
+        except KeyError:
+            print(json_file)
+            
+    return data, list(set([d[2] for d in data]))
 
 def parsing_mind(origin_root, mind_json):
     print("mindmindmindmindmindmindmind")
-    jpg_files = glob.glob(os.path.join(origin_root, "*/*.jpg"))
-    json_files = glob.glob(os.path.join(inf_json, "*/*.json"))
-    print(len(jpg_files), len(json_files))
-
-    # jpg_data = {i.split("/")[-1]:i for i in jpg_files}
-
-    class_set = []
+    json_files = glob.glob(os.path.join(mind_json, "*/*.json"))
     data = []
     for json_file in json_files:
+        vname = json_file.split("/")[-1].split(".")[0]
         with open(json_file) as f:
             json_data = json.load(f)
         
         images = {i["id"]:i["file_name"] for i in json_data["images"]}
         face_cls = {i["id"]:i["name"] for i in json_data["categories"]["face"]}
         
-        class_set += [i["name"] for i in json_data["categories"]["face"]]
-        data += [[matching_mind(jpg_files, images[ann["image_id"]]), face_cls[ann["face_id"]], ann["bbox"]] for ann in json_data["annotations"]["face"]]
-    print(len(data))
-    return data, list(set(class_set))
+        data += [
+            [
+                os.path.join(origin_root, "program-0007", "frames", vname, images[ann["image_id"]]),
+                xywh2xyxy(ann["bbox"]),
+                face_cls[ann["face_id"]]
+            ] for ann in json_data["annotations"]["face"]
+            if os.path.isfile(os.path.join(origin_root, "program-0007", "frames", vname, images[ann["image_id"]]))
+        ]
+    return data, list(set([d[2] for d in data]))
+def align(align_model, face, img):
+    feature = face['keypoints']
 
-def crop(data, classes, data_root, total_list, train_list, val_list, pad=20):
+    points = []
+    points.append(feature['left_eye'])
+    points.append(feature['right_eye'])
+    mouth_x = round((feature['mouth_left'][0] + feature['mouth_right'][0])/2)
+    mouth_y = round((feature['mouth_left'][1] + feature['mouth_right'][1])/2)
+    points.append([mouth_x, mouth_y])
+    landmarks = list(map(lambda p: (p[0], p[1]), points))
+
+    out = align_model.align(256, img, #bb=box,
+                            landmarks=landmarks,
+                            skipMulti=True)
+    resized_dim = (128, 128)
+    out = cv2.resize(out, resized_dim)
+
+    return out
+
+def crop(data, classes, data_root, total_list, train_list, val_list, pad=10):
 
     detector = MTCNN()
     align_model = AlignDlib.AlignDlib('')
@@ -69,42 +116,61 @@ def crop(data, classes, data_root, total_list, train_list, val_list, pad=20):
     total_txt = open(total_list, "w")
     train_txt = open(train_list, "w")
     val_txt = open(val_list, "w")
-
+    
+    no_face_img = []
+    
     celebs = {}
-
+    face_num = 0
     # crop and save and make list
     for d in data:
+#         if face_num == 100:
+#             break
+            
         img_file = d[0]
-        x, y, w, h = d[1]
+        x1, y1, x2, y2 = d[1]
+        
         label = classes.index(d[2])
 
         img = cv2.imread(img_file)
         
-        width, height, _ = rgb_img.shape
+        height, width, _ = img.shape
 
-        x2 = int(min(width, x + w + pad))
-        y2 = int(min(height, y + h + pad))
-        x1 = int(max(0, x - pad))
-        y1 = int(max(0, y - pad))
+        x2 = int(min(width-1, x2+pad))
+        y2 = int(min(height-1, y2+pad))
+        x1 = int(max(0, x1-pad))
+        y1 = int(max(0, y1-pad))
 
-        img = img[x1:x2, y1:y2]
-        rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        img = img[y1:y2, x1:x2]
+        try:
+            rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        except:
+            print(img_file, (x1, y1, x2, y2))
+            no_face_img.append(img_file)
+            continue
         
         faces = detector.detect_faces(rgb_img)
         faces = [f for f in faces if f['confidence'] > 0.9]
         
-        if len(faces) == 1:
+        new_file = os.path.join(data_root, str(face_num).zfill(10)+".png")            
+        
+        if len(faces) >= 1:
             face = faces[0]
+            aligned_face = align(align_model, face, img)
+            cv2.imwrite(new_file, aligned_face)    
+        else:
+            cv2.imwrite(new_file, rgb_img)
+            no_face_img.append(face_num)
+        
+        total_txt.write("{} {}\n".format(new_file, str(label)))
+        face_num += 1
 
-            aligned_face = align(face, img)
-
-            cv2.imwrite(os.path.join(data_root, img_file), aligned_face)    
-            total_txt.write("{} {}\n".format(img_file, str(label)))
-
-            try:
-                celebs[label].append(img_file)
-            except:
-                celebs[label] = [img_file]
+        try:
+            celebs[label].append(new_file)
+        except:
+            celebs[label] = [new_file]
+            
+    print("no face in {} images".format(str(len(no_face_img))))
+    print(no_face_img)
 
     train_celebs = {}
     val_celebs = {}
@@ -124,25 +190,6 @@ def crop(data, classes, data_root, total_list, train_list, val_list, pad=20):
     total_txt.close()
     train_txt.close()
     val_txt.close()
-
-def align(face, img):
-    feature = face['keypoints']
-
-    points = []
-    points.append(feature['left_eye'])
-    points.append(feature['right_eye'])
-    mouth_x = round((feature['mouth_left'][0] + feature['mouth_right'][0])/2)
-    mouth_y = round((feature['mouth_left'][1] + feature['mouth_right'][1])/2)
-    points.append([mouth_x, mouth_y])
-    landmarks = list(map(lambda p: (p[0], p[1]), points))
-
-    out = align_model.align(256, img, #bb=box,
-                            landmarks=landmarks,
-                            skipMulti=True)
-    resized_dim = (128, 128)
-    out = cv2.resize(out, resized_dim)
-
-    return out
 
 def make_pair_list(identity_list, pair_list, same_num, diff_num):
     # make pair list using identitiy_list
@@ -197,17 +244,39 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
         for pair in pairs:
             f.write("{} {} {}\n".format(pair[0], pair[1], pair[2]))
 
+def balance_data(data, num=20):
+    balanced_data = []
+    
+    for i in classes_dict:
+        try:
+            inds = random.sample(classes_dict[i], num)
+            balanced_data += [data[ind] for ind in inds]
+        except:
+            pass
+    
+    return balanced_data
 
 if __name__ == '__main__':
     opt = Config()
 
-    data1, classes1 = parsing_inf(opt.origin_root, opt.inf_json)
-    data2, classes2 = parsing_mind(opt.origin_root, opt.mind_json)
+    data1, classes1 = parsing_inf(opt.inf_json)
+    # data2, classes2 = parsing_mind(opt.mind_origin_root, opt.mind_json)
     
-    data = data1 + data2
-    classes = list(set(classes1 + classes2))
+    # data = data1 + data2
+    # classes = list(set(classes1 + classes2))
+    # print(len(data), len(classes))
 
+    data = data1
+    classes = classes1
     print(len(data), len(classes))
+
+    classes_dict = {i:[] for i in classes}
+    for i, d in enumerate(data):
+        classes_dict[d[2]].append(i)
+
+    balanced_data = balance_data(data)
+    balanced_class = list(set([d[2] for d in balanced_data]))
+    
     crop(data, classes, opt.root, opt.total_list, opt.train_list, opt.val_list):
 
     make_pair_list(opt.val_list, opt.pair_list, opt.same_num, opt.diff_num)

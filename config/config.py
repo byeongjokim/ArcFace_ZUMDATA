@@ -1,18 +1,19 @@
 class Config(object):
-    num_classes = 619
+    num_classes = 200
     easy_margin = False
     use_se = False
     optimizer = 'sgd'
 
-    origin_root = "/home/kbj/projects/arcface-pytorch/origin/"
-    inf_json = "/home/kbj/projects/arcface-pytorch/origin/"
-    mind_json = "/home/kbj/projects/arcface-pytorch/origin/"
+    # origin_root = "/home/kbj/projects/arcface-pytorch/origin/"
+    mind_origin_root = "/data/video/vod_tag02/bai/99/EBS"
+    inf_json = "/home/kbj/projects/ZUMDATA/inf/people/OBS"
+    mind_json = "./mind"
 
     root = '/home/kbj/projects/arcface-pytorch/ZUM/'
-    total_list = '/home/kbj/projects/arcface-pytorch/ZUM/total.txt'
-    train_list = '/home/kbj/projects/arcface-pytorch/ZUM/train.txt'
-    val_list = '/home/kbj/projects/arcface-pytorch/ZUM/val.txt'
-    pair_list = '/home/kbj/projects/arcface-pytorch/ZUM/pair.txt'
+    total_list = '/home/kbj/projects/ZUMDATA/total.txt'
+    train_list = '/home/kbj/projects/ZUMDATA/train.txt'
+    val_list = '/home/kbj/projects/ZUMDATA/val.txt'
+    pair_list = '/home/kbj/projects/ZUMDATA/test_pair.txt'
 
     val_per_class = 5
     same_num = 3
