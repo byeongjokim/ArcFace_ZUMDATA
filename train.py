@@ -45,8 +45,13 @@ if __name__ == '__main__':
     criterion = FocalLoss(gamma=2)
     # criterion = torch.nn.CrossEntropyLoss()
 
-    model = resnet_face18(use_se=opt.use_se)
-    # model = resnet50()
+    if opt.backbone == "resnet18":
+        model = resnet_face18(use_se=opt.use_se)
+    elif opt.backbone == "resnet50":
+        model = resnet50()
+    else:
+        return
+        
     metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
     
     print(model)

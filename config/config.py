@@ -1,5 +1,5 @@
 class Config(object):
-    backbone = 'arcface_zum'
+    backbone = 'resnet50'
     
     num_classes = 200
     metric = 'arc_margin'
@@ -23,7 +23,7 @@ class Config(object):
     zum_test_list = '/home/kbj/projects/ZUMDATA/test_pair.txt'
 
     checkpoints_path = 'checkpoints'
-    test_model_path = 'checkpoints/arcface_zum_40.pth'    
+    test_model_path = 'checkpoints/resnet50_40.pth'    
 
     max_epoch = 50
     lr = 1e-1  # initial learning rate

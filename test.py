@@ -153,8 +153,12 @@ if __name__ == '__main__':
 
     opt = Config()
     
-    model = resnet_face18(opt.use_se)    
-    # model = resnet50()
+    if opt.backbone == "resnet18":
+        model = resnet_face18(use_se=opt.use_se)
+    elif opt.backbone == "resnet50":
+        model = resnet50()
+    else:
+        return
 
     model = DataParallel(model)
 
