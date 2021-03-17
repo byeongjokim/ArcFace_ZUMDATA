@@ -9,7 +9,7 @@ class Config(object):
     inf_json = "/home/kbj/projects/ZUMDATA/inf/people/OBS"
     mind_json = "./mind"
 
-    root = '/home/kbj/projects/arcface-pytorch/ZUM/'
+    root = '/home/kbj/projects/ZUMDATA/total/'
     total_list = '/home/kbj/projects/ZUMDATA/total.txt'
     train_list = '/home/kbj/projects/ZUMDATA/train.txt'
     val_list = '/home/kbj/projects/ZUMDATA/val.txt'

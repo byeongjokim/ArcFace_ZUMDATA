@@ -102,6 +102,6 @@ if __name__ == '__main__':
         if i % opt.eval_interval == 0:
             with torch.no_grad():
                 model.eval()
-                acc = zum_test(model, img_paths, identity_list, opt.val_list, opt.val_batch_size)
+                acc = zum_test(model, img_paths, identity_list, opt.pair_list, opt.val_batch_size)
 
             print('[eval] epoch {} acc {}'.format(i, acc))
