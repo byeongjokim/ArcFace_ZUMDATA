@@ -33,3 +33,4 @@ $python train.py
 ```
 
 ## Results
+Verification Accuracy: 90.8%

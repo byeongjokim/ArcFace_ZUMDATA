@@ -1,5 +1,5 @@
 class Config(object):
-    backbone = 'resnet50'
+    backbone = 'resnet18'
     
     num_classes = 200
     metric = 'arc_margin'
