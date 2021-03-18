@@ -48,10 +48,10 @@ if __name__ == '__main__':
     if opt.backbone == "resnet18":
         model = resnet_face18(use_se=opt.use_se)
     elif opt.backbone == "resnet50":
-        model = resnet50()
+        model = SEResNet_IR(50, mode='se_ir')
     else:
         return
-        
+
     metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
     
     print(model)

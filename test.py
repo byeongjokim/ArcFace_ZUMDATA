@@ -32,7 +32,7 @@ def get_zum_list(pair_list):
 
 def load_image(img_path):
     image = cv2.imread(img_path, 0)
-    image = cv2.resize(image, (128, 128))
+    image = cv2.resize(image, (112, 112))
     if image is None:
         return None
     image = np.dstack((image, np.fliplr(image)))

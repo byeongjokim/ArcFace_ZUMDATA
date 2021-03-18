@@ -1,12 +1,12 @@
 class Config(object):
-    backbone = 'resnet18'
+    backbone = 'resnet50'
     
     num_classes = 200
     metric = 'arc_margin'
     easy_margin = False
     use_se = False
 
-    input_shape = (1, 128, 128)
+    input_shape = (3, 112, 112)
 
     optimizer = 'sgd'
 

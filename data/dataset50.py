@@ -9,9 +9,9 @@ import cv2
 import sys
 
 
-class Dataset(data.Dataset):
+class Dataset50(data.Dataset):
 
-    def __init__(self, root, data_list_file, phase='train', input_shape):
+    def __init__(self, root, data_list_file, phase='train', input_shape=(3, 112, 112)):
         self.phase = phase
         self.input_shape = input_shape
 
@@ -45,10 +45,7 @@ class Dataset(data.Dataset):
         splits = sample.split()
         img_path = splits[0]
         data = Image.open(img_path)
-        
-        if self.input_shape[0] == 1:
-            data = data.convert('L')
-
+        data = data.convert('L')
         data = self.transforms(data)
         label = np.int32(splits[1])
         return data.float(), label
