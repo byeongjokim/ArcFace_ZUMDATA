@@ -25,7 +25,7 @@ class Config(object):
     checkpoints_path = 'checkpoints'
     test_model_path = 'checkpoints/resnet50_40.pth'    
 
-    max_epoch = 50
+    max_epoch = 200
     lr = 1e-1  # initial learning rate
     lr_step = 10
     lr_decay = 0.95  # when val_loss increase, lr = lr*lr_decay

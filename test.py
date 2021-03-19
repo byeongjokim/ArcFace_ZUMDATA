@@ -13,6 +13,8 @@ import numpy as np
 import time
 from config import Config
 from torch.nn import DataParallel
+from torchvision import transforms as T
+from PIL import Image, ImageOps
 
 
 def get_zum_list(pair_list):
@@ -30,17 +32,45 @@ def get_zum_list(pair_list):
     return data_list
 
 
+# def load_image(img_path):
+#     image = cv2.imread(img_path, 0)
+#     image = cv2.resize(image, (128, 128))
+#     if image is None:
+#         return None
+#     image = np.dstack((image, np.fliplr(image)))
+#     image = image.transpose((2, 0, 1))
+#     image = image[:, np.newaxis, :, :]
+#     image = image.astype(np.float32, copy=False)
+#     image -= 127.5
+#     image /= 127.5
+#     return image
+
+# def load_image(img_path):
+#     image = cv2.imread(img_path)
+#     image = cv2.resize(image, (112, 112))
+#     if image is None:
+#         return None
+#     image = np.stack((image, np.fliplr(image)), 0)
+#     image = image.transpose((0, 3, 1, 2))
+#     image = image.astype(np.float32, copy=False)
+#     image -= 127.5
+#     image /= 127.5
+#     return image
+
 def load_image(img_path):
-    image = cv2.imread(img_path, 0)
-    image = cv2.resize(image, (112, 112))
-    if image is None:
-        return None
-    image = np.dstack((image, np.fliplr(image)))
-    image = image.transpose((2, 0, 1))
-    image = image[:, np.newaxis, :, :]
-    image = image.astype(np.float32, copy=False)
-    image -= 127.5
-    image /= 127.5
+    normalize = T.Normalize(mean=[0.5], std=[0.5])
+    transforms = T.Compose([
+        T.CenterCrop((112, 112)),
+        T.ToTensor(),
+        normalize
+    ])
+    data = Image.open(img_path)
+    data_f = ImageOps.mirror(data)
+
+    data = np.asarray(transforms(data))
+    data_f = np.asarray(ImageOps.mirror(data_f))
+
+    image = np.stack((data, data_f), 0)
     return image
 
 
@@ -140,7 +170,6 @@ def test_performance(fe_dict, pair_list):
 def zum_test(model, img_paths, identity_list, compair_list, batch_size):
     s = time.time()
     features, cnt = get_featurs(model, img_paths, batch_size=batch_size)
-    print(features.shape)
     t = time.time() - s
     print('total time is {}, average time is {}'.format(t, t / cnt))
     fe_dict = get_feature_dict(identity_list, features)
