@@ -101,4 +101,4 @@ if __name__ == '__main__':
             save_model(model, opt.checkpoints_path, opt.backbone, i)
 
         model.eval()
-        acc = zum_test(model, img_paths, identity_list, opt.zum_test_list, opt.test_batch_size)
+        acc = zum_test(model, img_paths, opt.input_shape, identity_list, opt.zum_test_list, opt.test_batch_size)

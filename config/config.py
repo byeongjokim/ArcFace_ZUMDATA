@@ -1,5 +1,5 @@
 class Config(object):
-    backbone = 'resnet50'
+    backbone = 'resnet18'
     
     num_classes = 200
     metric = 'arc_margin'
@@ -25,12 +25,16 @@ class Config(object):
     zum_test_list = '/home/kbj/projects/ZUMDATA/test_pair.txt'
 
     checkpoints_path = 'checkpoints'
-    test_model_path = 'checkpoints/resnet50_40.pth'    
+
+    if backbone == "resnet18":
+        test_model_path = 'checkpoints/resnet18/resnet18_30.pth'    
+    else:
+        test_model_path = 'checkpoints/resnet50/resnet50_50.pth'
 
     max_epoch = 200
     lr = 1e-1  # initial learning rate
     lr_step = 10
-    lr_decay = 0.5  # when val_loss increase, lr = lr*lr_decay
+    lr_decay = 0.2  # when val_loss increase, lr = lr*lr_decay
     weight_decay = 5e-4
 
     train_batch_size = 64  # batch size
