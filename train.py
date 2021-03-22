@@ -50,7 +50,7 @@ if __name__ == '__main__':
     elif opt.backbone == "resnet50":
         model = SEResNet_IR(50, mode='se_ir')
     else:
-        return
+        exit
 
     metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
     
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     # optimizer = torch.optim.Adam([{'params': model.parameters()}, {'params': metric_fc.parameters()}],
     #                                 lr=opt.lr, weight_decay=opt.weight_decay)
     
-    scheduler = StepLR(optimizer, step_size=opt.lr_step, gamma=0.1)
+    scheduler = StepLR(optimizer, step_size=opt.lr_step, gamma=opt.lr_decay)
 
     start = time.time()
     for i in range(opt.max_epoch):
@@ -93,7 +93,7 @@ if __name__ == '__main__':
                 acc = np.mean((output == label).astype(int))
                 speed = opt.print_freq / (time.time() - start)
                 time_str = time.asctime(time.localtime(time.time()))
-                print('{} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, ii, speed, loss.item(), acc))
+                print('{} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, iters, speed, loss.item(), acc))
 
                 start = time.time()
 

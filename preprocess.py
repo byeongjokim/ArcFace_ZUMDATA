@@ -149,8 +149,9 @@ def crop(data, classes, data_root, total_list, train_list, val_list, test_list, 
             aligned_face = align(align_model, face, img)
             cv2.imwrite(new_file, aligned_face)    
         else:
-            cv2.imwrite(new_file, rgb_img)
+            # cv2.imwrite(new_file, rgb_img)
             no_face_img.append(face_num)
+            continue
         
         total_txt.write("{} {}\n".format(new_file, str(label)))
         face_num += 1
@@ -169,8 +170,8 @@ def crop(data, classes, data_root, total_list, train_list, val_list, test_list, 
     for i in celebs:
         random.shuffle(celebs[i])
         train_celebs[i] = celebs[i][:-6]
-        val_celebs[i] = celebs[i][-6:-4]
-        test_celebs[i] = celebs[i][-4:]
+        val_celebs[i] = celebs[i][-6:-5]
+        test_celebs[i] = celebs[i][-5:]
     
     for i in train_celebs:
         for row in train_celebs[i]:
@@ -188,8 +189,8 @@ def crop(data, classes, data_root, total_list, train_list, val_list, test_list, 
     train_txt.close()
     val_txt.close()
     test_txt.close()
-
-def make_pair_list(identity_list, pair_list, same_num, diff_num):
+    
+def make_pair_list(identity_list, pair_list, same_num, diff_num, total_same_num, total_diff_num):
     # make pair list using identitiy_list
     # img1 1
     # img2 2
@@ -216,7 +217,7 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
         images.append(img)
         labels.append(label)
     
-    pairs = []
+    same_pairs = []
     # same labels
     for i in check:
         candi = list(combinations(check[i]["files"], 2))
@@ -227,16 +228,23 @@ def make_pair_list(identity_list, pair_list, same_num, diff_num):
 
         candi = candi[:same_num]
         
-        pairs += candi
-
+        same_pairs += candi
+    
+    same_pairs = random.sample(same_pairs, total_same_num)
+    
+    diff_pairs = []
     # diff labels
     for img, label in zip(images, labels):
         cnt = 0
         while cnt != diff_num:
             idx = random.randrange(0, len(images))
             if not label == labels[idx]:
-                pairs.append([img, images[idx], 0])
+                diff_pairs.append([img, images[idx], 0])
                 cnt += 1
+    
+    diff_pairs = random.sample(diff_pairs, total_diff_num)
+    
+    pairs = same_pairs + diff_pairs
     
     with open(pair_list, "w") as f:
         for pair in pairs:
@@ -274,5 +282,4 @@ if __name__ == '__main__':
     
     crop(data, classes, opt.root, opt.total_list, opt.train_list, opt.val_list, opt.test_list):
 
-    make_pair_list(opt.val_list, opt.val_pair_list, 5, 5)
-    make_pair_list(opt.test_list, opt.zum_test_list, 5, 5)
+    make_pair_list(opt.test_list, opt.zum_test_list, 5, 5, 300, 300)

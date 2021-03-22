@@ -6,7 +6,10 @@ class Config(object):
     easy_margin = False
     use_se = False
 
-    input_shape = (3, 112, 112)
+    if backbone == "resnet18":
+        input_shape = (1, 128, 128)
+    else:
+        input_shape = (3, 112, 112)
 
     optimizer = 'sgd'
 
@@ -19,7 +22,6 @@ class Config(object):
     val_list = "/home/kbj/projects/ZUMDATA/val.txt"
     test_list = "/home/kbj/projects/ZUMDATA/test.txt"
 
-    val_pair_list = "/home/kbj/projects/ZUMDATA/val_pair.txt"
     zum_test_list = '/home/kbj/projects/ZUMDATA/test_pair.txt'
 
     checkpoints_path = 'checkpoints'
@@ -28,7 +30,7 @@ class Config(object):
     max_epoch = 200
     lr = 1e-1  # initial learning rate
     lr_step = 10
-    lr_decay = 0.95  # when val_loss increase, lr = lr*lr_decay
+    lr_decay = 0.5  # when val_loss increase, lr = lr*lr_decay
     weight_decay = 5e-4
 
     train_batch_size = 64  # batch size

@@ -31,55 +31,33 @@ def get_zum_list(pair_list):
             data_list.append(splits[1])
     return data_list
 
-
-# def load_image(img_path):
-#     image = cv2.imread(img_path, 0)
-#     image = cv2.resize(image, (128, 128))
-#     if image is None:
-#         return None
-#     image = np.dstack((image, np.fliplr(image)))
-#     image = image.transpose((2, 0, 1))
-#     image = image[:, np.newaxis, :, :]
-#     image = image.astype(np.float32, copy=False)
-#     image -= 127.5
-#     image /= 127.5
-#     return image
-
-# def load_image(img_path):
-#     image = cv2.imread(img_path)
-#     image = cv2.resize(image, (112, 112))
-#     if image is None:
-#         return None
-#     image = np.stack((image, np.fliplr(image)), 0)
-#     image = image.transpose((0, 3, 1, 2))
-#     image = image.astype(np.float32, copy=False)
-#     image -= 127.5
-#     image /= 127.5
-#     return image
-
-def load_image(img_path):
+def load_image(img_path, input_shape):
     normalize = T.Normalize(mean=[0.5], std=[0.5])
     transforms = T.Compose([
-        T.CenterCrop((112, 112)),
+        T.CenterCrop(input_shape[1:]),
         T.ToTensor(),
         normalize
     ])
     data = Image.open(img_path)
+    
+    if input_shape[0] == 1:
+        data = data.convert('L')
+
     data_f = ImageOps.mirror(data)
 
     data = np.asarray(transforms(data))
-    data_f = np.asarray(ImageOps.mirror(data_f))
+    data_f = np.asarray(transforms(data_f))
 
     image = np.stack((data, data_f), 0)
     return image
 
 
-def get_featurs(model, test_list, batch_size=10):
+def get_featurs(model, test_list, input_shape, batch_size=10):
     images = None
     features = None
     cnt = 0
     for i, img_path in enumerate(test_list):
-        image = load_image(img_path)
+        image = load_image(img_path, input_shape)
         if image is None:
             print('read {} error'.format(img_path))
 
@@ -167,9 +145,9 @@ def test_performance(fe_dict, pair_list):
     return acc, th
 
 
-def zum_test(model, img_paths, identity_list, compair_list, batch_size):
+def zum_test(model, img_paths, input_shape, identity_list, compair_list, batch_size):
     s = time.time()
-    features, cnt = get_featurs(model, img_paths, batch_size=batch_size)
+    features, cnt = get_featurs(model, img_paths, input_shape, batch_size=batch_size)
     t = time.time() - s
     print('total time is {}, average time is {}'.format(t, t / cnt))
     fe_dict = get_feature_dict(identity_list, features)
@@ -181,13 +159,15 @@ def zum_test(model, img_paths, identity_list, compair_list, batch_size):
 if __name__ == '__main__':
 
     opt = Config()
+
+    os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_id
     
     if opt.backbone == "resnet18":
         model = resnet_face18(use_se=opt.use_se)
     elif opt.backbone == "resnet50":
-        model = resnet50()
+        model = SEResNet_IR(50, mode='se_ir')
     else:
-        return
+        exit
 
     model = DataParallel(model)
 
@@ -198,7 +178,7 @@ if __name__ == '__main__':
     img_paths = [os.path.join(opt.root, each) for each in identity_list]
 
     model.eval()
-    zum_test(model, img_paths, identity_list, opt.zum_test_list, opt.test_batch_size)
+    zum_test(model, img_paths, opt.input_shape, identity_list, opt.zum_test_list, opt.test_batch_size)
 
 
 
