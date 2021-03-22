@@ -53,5 +53,5 @@ $python test.py
 ```
 
 ## Results (Verification Accuracy)
-resnet18: 90%
-resnet50: 88%
+- resnet18: 90%
+- resnet50: 88%
