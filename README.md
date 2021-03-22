@@ -7,10 +7,25 @@ Forked from [arcface-pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
 $pip install -r requirements.txt
 ```
 
+```
+download https://drive.google.com/file/d/11fm8ICdwjXgonf1K0esi9TrwenrG3aTW/view?usp=sharing
+unzip checkpoints.zip
+```
+File Structure
+- config/
+- data/
+- models/
+- checkpoints/
+- AlignDlib.py
+- preprocess.py
+- test.py
+- train.py
+
 ## Configure
 ```
 $vi config/config.py
 ```
+- backbone: resnet18/resnet50
 - inf_json: json directory of zum data for preprocessing data
 - root: face images directory
 - total_list: total list of face images
@@ -19,7 +34,7 @@ $vi config/config.py
 - test_list: testing list of face images
 - val_pair_list: pair of validation list for verification accuracy
 - zum_test_list: pair of testing list for verification accuracy
-- backbone, max_epoch, lr ...: settings for training
+- max_epoch, lr ...: settings for training
 
 ## Preprocess
 ```
@@ -27,10 +42,16 @@ $python preprocess.py
 ```
 Preprocessing **image, json** to **face image, list**
 
-## Run
+## Train
 ```
 $python train.py
 ```
 
-## Results
-Verification Accuracy: 90.8%
+## Test
+```
+$python test.py
+```
+
+## Results (Verification Accuracy)
+resnet18: 90%
+resnet50: 88%
