@@ -3,10 +3,19 @@ Forked from [arcface-pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
 
 # How to run
 ## Install
+### Dependency
 ```
 $pip install -r requirements.txt
 ```
 
+### Data
+```
+download https://drive.google.com/file/d/1LzMcBhpfGLO9HOYS15rg_tvko17HKKvy/view?usp=sharing
+unzip ZUM_DATA
+modify file path of all txt (absolute path)
+```
+
+### Checkpoints
 ```
 download https://drive.google.com/file/d/11fm8ICdwjXgonf1K0esi9TrwenrG3aTW/view?usp=sharing
 unzip checkpoints.zip
