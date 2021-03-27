@@ -138,6 +138,12 @@ def test_performance(fe_dict, pair_list):
         label = int(splits[2])
         sim = cosin_metric(fe_1, fe_2)
         
+        print("[{}] =====".format(time.strftime('%c', time.localtime(time.time()))))
+        print("first image: {}".format(splits[0]))
+        print("second image: {}".format(splits[1]))
+        print("label: {}".format(splits[2]))
+        print("cosine metric for two images: {}".format(str(sim)))
+        
         sims.append(sim)
         labels.append(label)
 

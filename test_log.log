@@ -1,0 +1,3002 @@
+[Sat Mar 27 15:03:49 2021] total time is 3.9033806324005127, average time is 0.08485610070435898
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000151.png
+second image: 0000000157.png
+label: 1
+cosine metric for two images: 0.36507413
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002442.png
+second image: 0000002432.png
+label: 1
+cosine metric for two images: 0.49284133
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000176.png
+second image: 0000000178.png
+label: 1
+cosine metric for two images: 0.90106624
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000489.png
+second image: 0000000477.png
+label: 1
+cosine metric for two images: 0.2600865
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000230.png
+second image: 0000000242.png
+label: 1
+cosine metric for two images: 0.2587468
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000250.png
+second image: 0000000253.png
+label: 1
+cosine metric for two images: 0.49181044
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002857.png
+second image: 0000002873.png
+label: 1
+cosine metric for two images: 0.06416875
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000583.png
+second image: 0000000580.png
+label: 1
+cosine metric for two images: 0.4405922
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003272.png
+second image: 0000003269.png
+label: 1
+cosine metric for two images: 0.3402258
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003465.png
+second image: 0000003479.png
+label: 1
+cosine metric for two images: 0.41809854
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002376.png
+second image: 0000002391.png
+label: 1
+cosine metric for two images: 0.21975094
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001755.png
+second image: 0000001763.png
+label: 1
+cosine metric for two images: 0.45252323
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002951.png
+second image: 0000002960.png
+label: 1
+cosine metric for two images: 0.26010886
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003140.png
+second image: 0000003144.png
+label: 1
+cosine metric for two images: 0.33411187
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001005.png
+second image: 0000001003.png
+label: 1
+cosine metric for two images: 0.69936675
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000007.png
+second image: 0000000003.png
+label: 1
+cosine metric for two images: 0.32715297
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001439.png
+second image: 0000001436.png
+label: 1
+cosine metric for two images: 0.18377891
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001399.png
+second image: 0000001396.png
+label: 1
+cosine metric for two images: 0.7789522
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000044.png
+second image: 0000000049.png
+label: 1
+cosine metric for two images: 0.6463167
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003345.png
+second image: 0000003351.png
+label: 1
+cosine metric for two images: 0.62636715
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001764.png
+second image: 0000001763.png
+label: 1
+cosine metric for two images: 0.08828499
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001967.png
+second image: 0000001968.png
+label: 1
+cosine metric for two images: 0.09084851
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001180.png
+second image: 0000001190.png
+label: 1
+cosine metric for two images: 0.68000805
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003308.png
+second image: 0000003314.png
+label: 1
+cosine metric for two images: -0.05151274
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002637.png
+second image: 0000002632.png
+label: 1
+cosine metric for two images: 0.5022144
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002338.png
+second image: 0000002336.png
+label: 1
+cosine metric for two images: 0.1867429
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001457.png
+second image: 0000001454.png
+label: 1
+cosine metric for two images: 0.11690439
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001051.png
+second image: 0000001054.png
+label: 1
+cosine metric for two images: 0.22997934
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002795.png
+second image: 0000002797.png
+label: 1
+cosine metric for two images: 0.8746697
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001622.png
+second image: 0000001619.png
+label: 1
+cosine metric for two images: 0.42587656
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002764.png
+second image: 0000002756.png
+label: 1
+cosine metric for two images: 0.51091695
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000601.png
+second image: 0000000591.png
+label: 1
+cosine metric for two images: 0.31713298
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000508.png
+second image: 0000000512.png
+label: 1
+cosine metric for two images: 0.2345054
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001488.png
+second image: 0000001477.png
+label: 1
+cosine metric for two images: 0.8609048
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003097.png
+second image: 0000003096.png
+label: 1
+cosine metric for two images: -0.12171275
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001292.png
+second image: 0000001308.png
+label: 1
+cosine metric for two images: 0.060803503
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000588.png
+second image: 0000000591.png
+label: 1
+cosine metric for two images: 0.41648772
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002581.png
+second image: 0000002577.png
+label: 1
+cosine metric for two images: 0.500282
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003042.png
+second image: 0000003055.png
+label: 1
+cosine metric for two images: 0.39945316
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002195.png
+second image: 0000002200.png
+label: 1
+cosine metric for two images: 0.89295745
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000386.png
+second image: 0000000387.png
+label: 1
+cosine metric for two images: 0.1523246
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002040.png
+second image: 0000002038.png
+label: 1
+cosine metric for two images: 0.52716607
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003312.png
+second image: 0000003307.png
+label: 1
+cosine metric for two images: 0.35836533
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002122.png
+second image: 0000002111.png
+label: 1
+cosine metric for two images: 0.38788489
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003121.png
+second image: 0000003118.png
+label: 1
+cosine metric for two images: 0.48892403
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003076.png
+second image: 0000003078.png
+label: 1
+cosine metric for two images: 0.96351266
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002780.png
+second image: 0000002781.png
+label: 1
+cosine metric for two images: -0.22841218
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001092.png
+second image: 0000001088.png
+label: 1
+cosine metric for two images: 0.6247224
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002970.png
+second image: 0000002969.png
+label: 1
+cosine metric for two images: 0.6259772
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000280.png
+second image: 0000000273.png
+label: 1
+cosine metric for two images: 0.3302465
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001880.png
+second image: 0000001877.png
+label: 1
+cosine metric for two images: 0.5577034
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001218.png
+second image: 0000001213.png
+label: 1
+cosine metric for two images: 0.8104481
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000943.png
+second image: 0000000944.png
+label: 1
+cosine metric for two images: 0.37468183
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003063.png
+second image: 0000003068.png
+label: 1
+cosine metric for two images: 0.9872203
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002657.png
+second image: 0000002651.png
+label: 1
+cosine metric for two images: 0.80177873
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000444.png
+second image: 0000000454.png
+label: 1
+cosine metric for two images: 0.35226312
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002604.png
+second image: 0000002597.png
+label: 1
+cosine metric for two images: 0.061700527
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001953.png
+second image: 0000001948.png
+label: 1
+cosine metric for two images: 0.42325088
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002003.png
+second image: 0000002004.png
+label: 1
+cosine metric for two images: 0.9130592
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000659.png
+second image: 0000000656.png
+label: 1
+cosine metric for two images: 0.44826773
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001636.png
+second image: 0000001635.png
+label: 1
+cosine metric for two images: 0.02955774
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002935.png
+second image: 0000002942.png
+label: 1
+cosine metric for two images: 0.07997622
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000695.png
+second image: 0000000694.png
+label: 1
+cosine metric for two images: 0.9840155
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000542.png
+second image: 0000000547.png
+label: 1
+cosine metric for two images: 0.47604966
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002235.png
+second image: 0000002238.png
+label: 1
+cosine metric for two images: 0.4029382
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000036.png
+second image: 0000000029.png
+label: 1
+cosine metric for two images: 0.57832354
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002934.png
+second image: 0000002924.png
+label: 1
+cosine metric for two images: 0.22137351
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003561.png
+second image: 0000003565.png
+label: 1
+cosine metric for two images: 0.048857767
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003160.png
+second image: 0000003163.png
+label: 1
+cosine metric for two images: 0.5598062
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002840.png
+second image: 0000002842.png
+label: 1
+cosine metric for two images: 0.5825496
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001436.png
+second image: 0000001442.png
+label: 1
+cosine metric for two images: 0.13377082
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002452.png
+second image: 0000002463.png
+label: 1
+cosine metric for two images: 0.97926646
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001723.png
+second image: 0000001727.png
+label: 1
+cosine metric for two images: 0.435982
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001854.png
+second image: 0000001853.png
+label: 1
+cosine metric for two images: 0.64798254
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000592.png
+second image: 0000000591.png
+label: 1
+cosine metric for two images: 0.32279634
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001256.png
+second image: 0000001246.png
+label: 1
+cosine metric for two images: 0.24119993
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000433.png
+second image: 0000000417.png
+label: 1
+cosine metric for two images: 0.50975597
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000772.png
+second image: 0000000777.png
+label: 1
+cosine metric for two images: 0.7888715
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000807.png
+second image: 0000000802.png
+label: 1
+cosine metric for two images: 0.3372788
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001228.png
+second image: 0000001224.png
+label: 1
+cosine metric for two images: 0.49213406
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002110.png
+second image: 0000002115.png
+label: 1
+cosine metric for two images: 0.11925255
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000742.png
+second image: 0000000732.png
+label: 1
+cosine metric for two images: 0.1983276
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003054.png
+second image: 0000003055.png
+label: 1
+cosine metric for two images: 0.4430114
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003180.png
+second image: 0000003189.png
+label: 1
+cosine metric for two images: 0.41430876
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002822.png
+second image: 0000002818.png
+label: 1
+cosine metric for two images: 0.28797522
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000633.png
+second image: 0000000637.png
+label: 1
+cosine metric for two images: 0.03715857
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002074.png
+second image: 0000002064.png
+label: 1
+cosine metric for two images: 0.49991134
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001913.png
+second image: 0000001922.png
+label: 1
+cosine metric for two images: 0.78588784
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003368.png
+second image: 0000003369.png
+label: 1
+cosine metric for two images: 0.6761532
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000023.png
+second image: 0000000029.png
+label: 1
+cosine metric for two images: 0.49935773
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000539.png
+second image: 0000000541.png
+label: 1
+cosine metric for two images: 0.52780265
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002699.png
+second image: 0000002693.png
+label: 1
+cosine metric for two images: 0.5531597
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001282.png
+second image: 0000001289.png
+label: 1
+cosine metric for two images: 0.8487994
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000736.png
+second image: 0000000741.png
+label: 1
+cosine metric for two images: 0.8396986
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002855.png
+second image: 0000002856.png
+label: 1
+cosine metric for two images: 0.24527149
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000088.png
+second image: 0000000082.png
+label: 1
+cosine metric for two images: 0.21546231
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001271.png
+second image: 0000001257.png
+label: 1
+cosine metric for two images: -0.04921154
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000471.png
+second image: 0000000464.png
+label: 1
+cosine metric for two images: 0.16872615
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002870.png
+second image: 0000002859.png
+label: 1
+cosine metric for two images: 0.49951777
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002610.png
+second image: 0000002604.png
+label: 1
+cosine metric for two images: 0.022096116
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001802.png
+second image: 0000001787.png
+label: 1
+cosine metric for two images: 0.39554426
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001913.png
+second image: 0000001921.png
+label: 1
+cosine metric for two images: 0.37834796
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002751.png
+second image: 0000002747.png
+label: 1
+cosine metric for two images: 0.6075974
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000363.png
+second image: 0000000369.png
+label: 1
+cosine metric for two images: 0.4717327
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001517.png
+second image: 0000001516.png
+label: 1
+cosine metric for two images: 0.37384558
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001427.png
+second image: 0000001434.png
+label: 1
+cosine metric for two images: 0.16263321
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001728.png
+second image: 0000001723.png
+label: 1
+cosine metric for two images: 0.3412029
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003279.png
+second image: 0000003274.png
+label: 1
+cosine metric for two images: 0.26734984
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003575.png
+second image: 0000003593.png
+label: 1
+cosine metric for two images: 0.63019013
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000343.png
+second image: 0000000350.png
+label: 1
+cosine metric for two images: 0.77715355
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001596.png
+second image: 0000001594.png
+label: 1
+cosine metric for two images: 0.31746504
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001889.png
+second image: 0000001890.png
+label: 1
+cosine metric for two images: 0.2694465
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002811.png
+second image: 0000002822.png
+label: 1
+cosine metric for two images: -0.0014519256
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000823.png
+second image: 0000000833.png
+label: 1
+cosine metric for two images: 0.08741425
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002209.png
+second image: 0000002208.png
+label: 1
+cosine metric for two images: -0.04926717
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003529.png
+second image: 0000003534.png
+label: 1
+cosine metric for two images: 0.19787142
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001346.png
+second image: 0000001347.png
+label: 1
+cosine metric for two images: 0.23271956
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002906.png
+second image: 0000002903.png
+label: 1
+cosine metric for two images: 0.78249145
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000944.png
+second image: 0000000937.png
+label: 1
+cosine metric for two images: 0.32311028
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002855.png
+second image: 0000002846.png
+label: 1
+cosine metric for two images: 0.48499867
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002135.png
+second image: 0000002137.png
+label: 1
+cosine metric for two images: 0.5147066
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001054.png
+second image: 0000001050.png
+label: 1
+cosine metric for two images: 0.4293358
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000960.png
+second image: 0000000967.png
+label: 1
+cosine metric for two images: 0.7602678
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001090.png
+second image: 0000001083.png
+label: 1
+cosine metric for two images: 0.37287718
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003391.png
+second image: 0000003404.png
+label: 1
+cosine metric for two images: 0.4234464
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001175.png
+second image: 0000001188.png
+label: 1
+cosine metric for two images: 0.7734316
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000524.png
+second image: 0000000522.png
+label: 1
+cosine metric for two images: 0.30764732
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002810.png
+second image: 0000002818.png
+label: 1
+cosine metric for two images: 0.30735937
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000730.png
+second image: 0000000732.png
+label: 1
+cosine metric for two images: -0.034974363
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003263.png
+second image: 0000003247.png
+label: 1
+cosine metric for two images: 0.14596674
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002990.png
+second image: 0000002994.png
+label: 1
+cosine metric for two images: 0.42631808
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003468.png
+second image: 0000003483.png
+label: 1
+cosine metric for two images: 0.42389223
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000818.png
+second image: 0000000802.png
+label: 1
+cosine metric for two images: 0.5853603
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002212.png
+second image: 0000002225.png
+label: 1
+cosine metric for two images: 0.6014767
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001190.png
+second image: 0000001182.png
+label: 1
+cosine metric for two images: 0.6706293
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000290.png
+second image: 0000000300.png
+label: 1
+cosine metric for two images: 0.31045038
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001210.png
+second image: 0000001213.png
+label: 1
+cosine metric for two images: 0.77838796
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003221.png
+second image: 0000003213.png
+label: 1
+cosine metric for two images: 0.96047246
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001924.png
+second image: 0000001941.png
+label: 1
+cosine metric for two images: 0.2839426
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001671.png
+second image: 0000001673.png
+label: 1
+cosine metric for two images: 0.17281352
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001819.png
+second image: 0000001813.png
+label: 1
+cosine metric for two images: 0.23463672
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003330.png
+second image: 0000003317.png
+label: 1
+cosine metric for two images: 0.9053544
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001893.png
+second image: 0000001898.png
+label: 1
+cosine metric for two images: 0.030976107
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000957.png
+second image: 0000000967.png
+label: 1
+cosine metric for two images: 0.32934287
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003233.png
+second image: 0000003243.png
+label: 1
+cosine metric for two images: 0.29779536
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000971.png
+second image: 0000000987.png
+label: 1
+cosine metric for two images: 0.45508975
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002288.png
+second image: 0000002281.png
+label: 1
+cosine metric for two images: 0.9767489
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001051.png
+second image: 0000001046.png
+label: 1
+cosine metric for two images: 0.9620341
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003024.png
+second image: 0000003037.png
+label: 1
+cosine metric for two images: 0.10625452
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001115.png
+second image: 0000001120.png
+label: 1
+cosine metric for two images: 0.66267073
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002104.png
+second image: 0000002105.png
+label: 1
+cosine metric for two images: 0.30358568
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003039.png
+second image: 0000003028.png
+label: 1
+cosine metric for two images: 0.41118574
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002325.png
+second image: 0000002334.png
+label: 1
+cosine metric for two images: 0.24252474
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000036.png
+second image: 0000000023.png
+label: 1
+cosine metric for two images: 0.36959565
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002038.png
+second image: 0000002056.png
+label: 1
+cosine metric for two images: 0.98165244
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001567.png
+second image: 0000001570.png
+label: 1
+cosine metric for two images: 0.09924985
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003151.png
+second image: 0000003140.png
+label: 1
+cosine metric for two images: 0.70522994
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000927.png
+second image: 0000000910.png
+label: 1
+cosine metric for two images: 0.22280952
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002875.png
+second image: 0000002884.png
+label: 1
+cosine metric for two images: 0.107718945
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001180.png
+second image: 0000001175.png
+label: 1
+cosine metric for two images: 0.65196395
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003176.png
+second image: 0000003184.png
+label: 1
+cosine metric for two images: 0.18886742
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001270.png
+second image: 0000001271.png
+label: 1
+cosine metric for two images: 0.06590617
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000489.png
+second image: 0000000483.png
+label: 1
+cosine metric for two images: 0.2596737
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001495.png
+second image: 0000001496.png
+label: 1
+cosine metric for two images: 0.81420547
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000822.png
+second image: 0000000823.png
+label: 1
+cosine metric for two images: 0.8990464
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001596.png
+second image: 0000001586.png
+label: 1
+cosine metric for two images: 0.24421228
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000351.png
+second image: 0000000354.png
+label: 1
+cosine metric for two images: 0.78506076
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000296.png
+second image: 0000000294.png
+label: 1
+cosine metric for two images: 0.3593573
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001950.png
+second image: 0000001948.png
+label: 1
+cosine metric for two images: 0.3952376
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000712.png
+second image: 0000000725.png
+label: 1
+cosine metric for two images: 0.76871157
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003223.png
+second image: 0000003221.png
+label: 1
+cosine metric for two images: 0.1864965
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000674.png
+second image: 0000000680.png
+label: 1
+cosine metric for two images: 0.9664975
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002622.png
+second image: 0000002621.png
+label: 1
+cosine metric for two images: 0.7571566
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002699.png
+second image: 0000002687.png
+label: 1
+cosine metric for two images: 0.46222833
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001196.png
+second image: 0000001192.png
+label: 1
+cosine metric for two images: 0.37378222
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000222.png
+second image: 0000000208.png
+label: 1
+cosine metric for two images: 0.17012878
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001244.png
+second image: 0000001246.png
+label: 1
+cosine metric for two images: 0.26121315
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000364.png
+second image: 0000000369.png
+label: 1
+cosine metric for two images: 0.08655127
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000567.png
+second image: 0000000554.png
+label: 1
+cosine metric for two images: -0.049677316
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002270.png
+second image: 0000002276.png
+label: 1
+cosine metric for two images: 0.3340833
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002545.png
+second image: 0000002554.png
+label: 1
+cosine metric for two images: 0.047902368
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000054.png
+second image: 0000000045.png
+label: 1
+cosine metric for two images: 0.30013287
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001713.png
+second image: 0000001723.png
+label: 1
+cosine metric for two images: 0.4344677
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002836.png
+second image: 0000002826.png
+label: 1
+cosine metric for two images: 0.5640201
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000519.png
+second image: 0000000522.png
+label: 1
+cosine metric for two images: 0.13885692
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001457.png
+second image: 0000001448.png
+label: 1
+cosine metric for two images: 0.40393108
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001355.png
+second image: 0000001354.png
+label: 1
+cosine metric for two images: 0.5401918
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001126.png
+second image: 0000001120.png
+label: 1
+cosine metric for two images: 0.721983
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002415.png
+second image: 0000002417.png
+label: 1
+cosine metric for two images: 0.11081158
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000372.png
+second image: 0000000359.png
+label: 1
+cosine metric for two images: 0.35150832
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003555.png
+second image: 0000003543.png
+label: 1
+cosine metric for two images: 0.4632829
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000922.png
+second image: 0000000927.png
+label: 1
+cosine metric for two images: 0.1682591
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000015.png
+second image: 0000000003.png
+label: 1
+cosine metric for two images: 0.24841939
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000712.png
+second image: 0000000713.png
+label: 1
+cosine metric for two images: 0.5287834
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002789.png
+second image: 0000002796.png
+label: 1
+cosine metric for two images: 0.91440606
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000547.png
+second image: 0000000549.png
+label: 1
+cosine metric for two images: 0.061242998
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002110.png
+second image: 0000002122.png
+label: 1
+cosine metric for two images: 0.12931164
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001099.png
+second image: 0000001108.png
+label: 1
+cosine metric for two images: 0.42257062
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000873.png
+second image: 0000000885.png
+label: 1
+cosine metric for two images: 0.4593772
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002105.png
+second image: 0000002094.png
+label: 1
+cosine metric for two images: 0.51132476
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001419.png
+second image: 0000001423.png
+label: 1
+cosine metric for two images: 0.43948218
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001099.png
+second image: 0000001110.png
+label: 1
+cosine metric for two images: 0.41053298
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002989.png
+second image: 0000002997.png
+label: 1
+cosine metric for two images: 0.5663571
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001000.png
+second image: 0000000997.png
+label: 1
+cosine metric for two images: 0.74938804
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003575.png
+second image: 0000003578.png
+label: 1
+cosine metric for two images: 0.64225584
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000767.png
+second image: 0000000765.png
+label: 1
+cosine metric for two images: 0.89650637
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002202.png
+second image: 0000002205.png
+label: 1
+cosine metric for two images: -0.005018148
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002235.png
+second image: 0000002245.png
+label: 1
+cosine metric for two images: 0.41832986
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001839.png
+second image: 0000001851.png
+label: 1
+cosine metric for two images: 0.051315453
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002639.png
+second image: 0000002640.png
+label: 1
+cosine metric for two images: 0.5491085
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001008.png
+second image: 0000001016.png
+label: 1
+cosine metric for two images: -0.005454956
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001575.png
+second image: 0000001570.png
+label: 1
+cosine metric for two images: 0.17428942
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001037.png
+second image: 0000001041.png
+label: 1
+cosine metric for two images: 0.029203238
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002656.png
+second image: 0000002651.png
+label: 1
+cosine metric for two images: 0.63730854
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002885.png
+second image: 0000002874.png
+label: 1
+cosine metric for two images: 0.2793286
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002584.png
+second image: 0000002581.png
+label: 1
+cosine metric for two images: 0.9926412
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002498.png
+second image: 0000002494.png
+label: 1
+cosine metric for two images: 0.6305755
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001730.png
+second image: 0000001736.png
+label: 1
+cosine metric for two images: 0.0455057
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001331.png
+second image: 0000001339.png
+label: 1
+cosine metric for two images: 0.4959604
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000905.png
+second image: 0000000895.png
+label: 1
+cosine metric for two images: 0.50868934
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000704.png
+second image: 0000000695.png
+label: 1
+cosine metric for two images: 0.21812028
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002288.png
+second image: 0000002296.png
+label: 1
+cosine metric for two images: 0.45923972
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001035.png
+second image: 0000001036.png
+label: 1
+cosine metric for two images: 0.72397125
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001156.png
+second image: 0000001160.png
+label: 1
+cosine metric for two images: 0.04691951
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000860.png
+second image: 0000000864.png
+label: 1
+cosine metric for two images: 0.26666662
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000650.png
+second image: 0000000652.png
+label: 1
+cosine metric for two images: 0.72722805
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000351.png
+second image: 0000000350.png
+label: 1
+cosine metric for two images: 0.89962286
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001910.png
+second image: 0000001922.png
+label: 1
+cosine metric for two images: 0.418396
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002067.png
+second image: 0000002069.png
+label: 1
+cosine metric for two images: 0.50144523
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002930.png
+second image: 0000002934.png
+label: 1
+cosine metric for two images: 0.6419953
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001821.png
+second image: 0000001807.png
+label: 1
+cosine metric for two images: 0.26273826
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002815.png
+second image: 0000002818.png
+label: 1
+cosine metric for two images: 0.18508004
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003431.png
+second image: 0000003444.png
+label: 1
+cosine metric for two images: 0.65391326
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000241.png
+second image: 0000000228.png
+label: 1
+cosine metric for two images: 0.25481173
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002981.png
+second image: 0000002967.png
+label: 1
+cosine metric for two images: 0.5995832
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003299.png
+second image: 0000003290.png
+label: 1
+cosine metric for two images: 0.23035064
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002610.png
+second image: 0000002607.png
+label: 1
+cosine metric for two images: 0.16144706
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002176.png
+second image: 0000002172.png
+label: 1
+cosine metric for two images: 0.8710502
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002906.png
+second image: 0000002896.png
+label: 1
+cosine metric for two images: 0.13209035
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000057.png
+second image: 0000000066.png
+label: 1
+cosine metric for two images: 0.17494476
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001015.png
+second image: 0000001016.png
+label: 1
+cosine metric for two images: 0.42597914
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002733.png
+second image: 0000002734.png
+label: 1
+cosine metric for two images: 0.83559614
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002427.png
+second image: 0000002419.png
+label: 1
+cosine metric for two images: 0.7049996
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003383.png
+second image: 0000003374.png
+label: 1
+cosine metric for two images: 0.16642405
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000334.png
+second image: 0000000338.png
+label: 1
+cosine metric for two images: 0.12171168
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001976.png
+second image: 0000001974.png
+label: 1
+cosine metric for two images: 0.4836709
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000971.png
+second image: 0000000970.png
+label: 1
+cosine metric for two images: 0.44805306
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000567.png
+second image: 0000000553.png
+label: 1
+cosine metric for two images: 0.1847927
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001516.png
+second image: 0000001526.png
+label: 1
+cosine metric for two images: 0.16728322
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002709.png
+second image: 0000002711.png
+label: 1
+cosine metric for two images: 0.7500924
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000290.png
+second image: 0000000298.png
+label: 1
+cosine metric for two images: -0.014641153
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002122.png
+second image: 0000002115.png
+label: 1
+cosine metric for two images: 0.6975648
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001461.png
+second image: 0000001473.png
+label: 1
+cosine metric for two images: 0.41329563
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002569.png
+second image: 0000002564.png
+label: 1
+cosine metric for two images: 0.87389034
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002078.png
+second image: 0000002084.png
+label: 1
+cosine metric for two images: 0.18303892
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003343.png
+second image: 0000003337.png
+label: 1
+cosine metric for two images: 0.25991654
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000609.png
+second image: 0000000608.png
+label: 1
+cosine metric for two images: 0.23514797
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001396.png
+second image: 0000001404.png
+label: 1
+cosine metric for two images: 0.25494596
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000684.png
+second image: 0000000686.png
+label: 1
+cosine metric for two images: 0.20598534
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002672.png
+second image: 0000002675.png
+label: 1
+cosine metric for two images: 0.5371814
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001035.png
+second image: 0000001041.png
+label: 1
+cosine metric for two images: 0.06842532
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000096.png
+second image: 0000000102.png
+label: 1
+cosine metric for two images: 0.08394665
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000889.png
+second image: 0000000882.png
+label: 1
+cosine metric for two images: 0.43533537
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000746.png
+second image: 0000000757.png
+label: 1
+cosine metric for two images: 0.20321725
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000089.png
+second image: 0000000088.png
+label: 1
+cosine metric for two images: 0.47094354
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002325.png
+second image: 0000002335.png
+label: 1
+cosine metric for two images: 0.19587275
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001542.png
+second image: 0000001540.png
+label: 1
+cosine metric for two images: 0.87566173
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002945.png
+second image: 0000002942.png
+label: 1
+cosine metric for two images: 0.61831456
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001098.png
+second image: 0000001110.png
+label: 1
+cosine metric for two images: 0.11123545
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003110.png
+second image: 0000003108.png
+label: 1
+cosine metric for two images: 0.19950813
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001470.png
+second image: 0000001464.png
+label: 1
+cosine metric for two images: 0.15187982
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002486.png
+second image: 0000002483.png
+label: 1
+cosine metric for two images: 0.156166
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002477.png
+second image: 0000002486.png
+label: 1
+cosine metric for two images: 0.401547
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002346.png
+second image: 0000002338.png
+label: 1
+cosine metric for two images: 0.35369942
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000453.png
+second image: 0000000449.png
+label: 1
+cosine metric for two images: 0.41072938
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001550.png
+second image: 0000001553.png
+label: 1
+cosine metric for two images: 0.6225478
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003372.png
+second image: 0000003359.png
+label: 1
+cosine metric for two images: 0.67169595
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001394.png
+second image: 0000001404.png
+label: 1
+cosine metric for two images: 0.17806739
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001457.png
+second image: 0000001444.png
+label: 1
+cosine metric for two images: 0.097319014
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000718.png
+second image: 0000000725.png
+label: 1
+cosine metric for two images: 0.8064892
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002727.png
+second image: 0000002733.png
+label: 1
+cosine metric for two images: 0.21909957
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003169.png
+second image: 0000003171.png
+label: 1
+cosine metric for two images: 0.34022224
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001796.png
+second image: 0000001802.png
+label: 1
+cosine metric for two images: 0.21053779
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000822.png
+second image: 0000000833.png
+label: 1
+cosine metric for two images: 0.019988988
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000054.png
+second image: 0000000051.png
+label: 1
+cosine metric for two images: 0.6107939
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002168.png
+second image: 0000002172.png
+label: 1
+cosine metric for two images: 0.8824775
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000307.png
+second image: 0000000305.png
+label: 1
+cosine metric for two images: 0.54715157
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000509.png
+second image: 0000000512.png
+label: 1
+cosine metric for two images: 0.3893024
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003509.png
+second image: 0000003504.png
+label: 1
+cosine metric for two images: 0.4458005
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000976.png
+second image: 0000000971.png
+label: 1
+cosine metric for two images: 0.42267916
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001994.png
+second image: 0000001999.png
+label: 1
+cosine metric for two images: 0.28020084
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001278.png
+second image: 0000001282.png
+label: 1
+cosine metric for two images: 0.9413432
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003317.png
+second image: 0000003334.png
+label: 1
+cosine metric for two images: 0.89857507
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000277.png
+second image: 0000000280.png
+label: 1
+cosine metric for two images: 0.0857731
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003037.png
+second image: 0000003028.png
+label: 1
+cosine metric for two images: 0.33504447
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001000.png
+second image: 0000001003.png
+label: 1
+cosine metric for two images: 0.6015686
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002846.png
+second image: 0000002856.png
+label: 1
+cosine metric for two images: 0.2677459
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000015.png
+second image: 0000000010.png
+label: 1
+cosine metric for two images: -0.019886732
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002874.png
+second image: 0000002882.png
+label: 1
+cosine metric for two images: 0.2914926
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002511.png
+second image: 0000002509.png
+label: 1
+cosine metric for two images: 0.053722102
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003196.png
+second image: 0000003078.png
+label: 0
+cosine metric for two images: 0.014177977
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001955.png
+second image: 0000000085.png
+label: 0
+cosine metric for two images: -0.08119213
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001309.png
+second image: 0000002262.png
+label: 0
+cosine metric for two images: -0.042168193
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000871.png
+second image: 0000002945.png
+label: 0
+cosine metric for two images: 0.041982513
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001920.png
+second image: 0000003416.png
+label: 0
+cosine metric for two images: 0.058910396
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000417.png
+second image: 0000002632.png
+label: 0
+cosine metric for two images: 0.10907205
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000215.png
+second image: 0000000162.png
+label: 0
+cosine metric for two images: 0.1872406
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000421.png
+second image: 0000000455.png
+label: 0
+cosine metric for two images: -0.16112863
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002094.png
+second image: 0000002753.png
+label: 0
+cosine metric for two images: 0.023774177
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000765.png
+second image: 0000000699.png
+label: 0
+cosine metric for two images: -0.106398724
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000222.png
+second image: 0000000659.png
+label: 0
+cosine metric for two images: 0.038245663
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003254.png
+second image: 0000002296.png
+label: 0
+cosine metric for two images: -0.019999623
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000409.png
+second image: 0000000927.png
+label: 0
+cosine metric for two images: 0.0733107
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000029.png
+second image: 0000003233.png
+label: 0
+cosine metric for two images: 0.04175059
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000307.png
+second image: 0000002896.png
+label: 0
+cosine metric for two images: -0.10374687
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000626.png
+second image: 0000000104.png
+label: 0
+cosine metric for two images: 0.17268446
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001064.png
+second image: 0000001796.png
+label: 0
+cosine metric for two images: -0.10764224
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000928.png
+second image: 0000000873.png
+label: 0
+cosine metric for two images: 0.2221683
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002445.png
+second image: 0000002832.png
+label: 0
+cosine metric for two images: 0.025809234
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002154.png
+second image: 0000002270.png
+label: 0
+cosine metric for two images: -0.12087318
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003379.png
+second image: 0000001300.png
+label: 0
+cosine metric for two images: -0.17072096
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003274.png
+second image: 0000000433.png
+label: 0
+cosine metric for two images: 0.06956922
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001120.png
+second image: 0000002915.png
+label: 0
+cosine metric for two images: -0.06804875
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000922.png
+second image: 0000003069.png
+label: 0
+cosine metric for two images: -0.119282484
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003285.png
+second image: 0000001940.png
+label: 0
+cosine metric for two images: 0.09975543
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003254.png
+second image: 0000000029.png
+label: 0
+cosine metric for two images: 0.07883625
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000852.png
+second image: 0000000736.png
+label: 0
+cosine metric for two images: -0.094186306
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000327.png
+second image: 0000001439.png
+label: 0
+cosine metric for two images: 0.18370236
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002651.png
+second image: 0000003578.png
+label: 0
+cosine metric for two images: -0.018116832
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001413.png
+second image: 0000000427.png
+label: 0
+cosine metric for two images: 0.0976385
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000588.png
+second image: 0000002243.png
+label: 0
+cosine metric for two images: 0.011129239
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002730.png
+second image: 0000003311.png
+label: 0
+cosine metric for two images: -0.12164284
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000945.png
+second image: 0000002952.png
+label: 0
+cosine metric for two images: -0.22180213
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002633.png
+second image: 0000003433.png
+label: 0
+cosine metric for two images: -0.12968488
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001188.png
+second image: 0000002994.png
+label: 0
+cosine metric for two images: -0.096616045
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003213.png
+second image: 0000000931.png
+label: 0
+cosine metric for two images: 0.09097975
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000121.png
+second image: 0000001448.png
+label: 0
+cosine metric for two images: 0.007559554
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002311.png
+second image: 0000000553.png
+label: 0
+cosine metric for two images: 0.0005408527
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000561.png
+second image: 0000001347.png
+label: 0
+cosine metric for two images: -0.049896333
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000395.png
+second image: 0000002410.png
+label: 0
+cosine metric for two images: -0.15954183
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001223.png
+second image: 0000003238.png
+label: 0
+cosine metric for two images: -0.1144214
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002103.png
+second image: 0000003524.png
+label: 0
+cosine metric for two images: 0.055000838
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001280.png
+second image: 0000002581.png
+label: 0
+cosine metric for two images: -0.15649444
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002168.png
+second image: 0000000228.png
+label: 0
+cosine metric for two images: 0.09351615
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003308.png
+second image: 0000002078.png
+label: 0
+cosine metric for two images: -0.0892122
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000907.png
+second image: 0000001019.png
+label: 0
+cosine metric for two images: -0.104977466
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003483.png
+second image: 0000000015.png
+label: 0
+cosine metric for two images: -0.060720783
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000359.png
+second image: 0000000405.png
+label: 0
+cosine metric for two images: -0.0069640726
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001223.png
+second image: 0000000054.png
+label: 0
+cosine metric for two images: -0.010242208
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001955.png
+second image: 0000001071.png
+label: 0
+cosine metric for two images: 0.016673354
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002945.png
+second image: 0000001706.png
+label: 0
+cosine metric for two images: -0.026560973
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000931.png
+second image: 0000002766.png
+label: 0
+cosine metric for two images: -0.040992104
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002584.png
+second image: 0000000049.png
+label: 0
+cosine metric for two images: 0.18731815
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001478.png
+second image: 0000002836.png
+label: 0
+cosine metric for two images: 0.15105371
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000449.png
+second image: 0000000208.png
+label: 0
+cosine metric for two images: -0.02358731
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000454.png
+second image: 0000000746.png
+label: 0
+cosine metric for two images: 0.1330029
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001622.png
+second image: 0000000298.png
+label: 0
+cosine metric for two images: 0.092406176
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000104.png
+second image: 0000000337.png
+label: 0
+cosine metric for two images: -0.0058224555
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001638.png
+second image: 0000001308.png
+label: 0
+cosine metric for two images: -0.15950888
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003575.png
+second image: 0000001257.png
+label: 0
+cosine metric for two images: -0.12832278
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000633.png
+second image: 0000001575.png
+label: 0
+cosine metric for two images: 0.06331711
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002917.png
+second image: 0000000338.png
+label: 0
+cosine metric for two images: -0.16887642
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002432.png
+second image: 0000001071.png
+label: 0
+cosine metric for two images: -0.06077101
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000944.png
+second image: 0000001833.png
+label: 0
+cosine metric for two images: -0.019550689
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003314.png
+second image: 0000000772.png
+label: 0
+cosine metric for two images: -0.04130254
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001384.png
+second image: 0000003299.png
+label: 0
+cosine metric for two images: 0.09739126
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002452.png
+second image: 0000001175.png
+label: 0
+cosine metric for two images: 0.028411387
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001088.png
+second image: 0000001470.png
+label: 0
+cosine metric for two images: 0.11961556
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003180.png
+second image: 0000003509.png
+label: 0
+cosine metric for two images: -0.08961643
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000944.png
+second image: 0000002038.png
+label: 0
+cosine metric for two images: 0.02823318
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000433.png
+second image: 0000003163.png
+label: 0
+cosine metric for two images: -0.18941903
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002885.png
+second image: 0000001016.png
+label: 0
+cosine metric for two images: -0.2011986
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000928.png
+second image: 0000000713.png
+label: 0
+cosine metric for two images: 0.20995301
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003184.png
+second image: 0000003250.png
+label: 0
+cosine metric for two images: 0.026876505
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003118.png
+second image: 0000002709.png
+label: 0
+cosine metric for two images: 0.04321656
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003209.png
+second image: 0000001088.png
+label: 0
+cosine metric for two images: -0.09849295
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000656.png
+second image: 0000000355.png
+label: 0
+cosine metric for two images: 0.033606064
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001550.png
+second image: 0000002058.png
+label: 0
+cosine metric for two images: -0.07421509
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000509.png
+second image: 0000003561.png
+label: 0
+cosine metric for two images: 0.018648485
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003128.png
+second image: 0000002362.png
+label: 0
+cosine metric for two images: 0.049719445
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002734.png
+second image: 0000000843.png
+label: 0
+cosine metric for two images: -0.076159276
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003078.png
+second image: 0000000455.png
+label: 0
+cosine metric for two images: 0.1509019
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002580.png
+second image: 0000003417.png
+label: 0
+cosine metric for two images: 0.045292392
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000873.png
+second image: 0000000077.png
+label: 0
+cosine metric for two images: -0.034631997
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001444.png
+second image: 0000002207.png
+label: 0
+cosine metric for two images: 0.1048651
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002200.png
+second image: 0000002678.png
+label: 0
+cosine metric for two images: -0.11999874
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000386.png
+second image: 0000001941.png
+label: 0
+cosine metric for two images: -0.010592621
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000927.png
+second image: 0000002656.png
+label: 0
+cosine metric for two images: -0.07722422
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001853.png
+second image: 0000001228.png
+label: 0
+cosine metric for two images: -0.052120015
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001620.png
+second image: 0000003163.png
+label: 0
+cosine metric for two images: 0.12432612
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002884.png
+second image: 0000001263.png
+label: 0
+cosine metric for two images: -0.0075682625
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001196.png
+second image: 0000002161.png
+label: 0
+cosine metric for two images: -0.047427066
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003039.png
+second image: 0000000010.png
+label: 0
+cosine metric for two images: -0.10181048
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001215.png
+second image: 0000003539.png
+label: 0
+cosine metric for two images: -0.018065644
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002498.png
+second image: 0000001635.png
+label: 0
+cosine metric for two images: -0.063593
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000758.png
+second image: 0000000088.png
+label: 0
+cosine metric for two images: -0.092548564
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003269.png
+second image: 0000002493.png
+label: 0
+cosine metric for two images: 0.06792921
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003176.png
+second image: 0000001948.png
+label: 0
+cosine metric for two images: 0.009910722
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001379.png
+second image: 0000002145.png
+label: 0
+cosine metric for two images: -0.004316012
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003353.png
+second image: 0000000795.png
+label: 0
+cosine metric for two images: -0.034493145
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000718.png
+second image: 0000002181.png
+label: 0
+cosine metric for two images: -0.17045195
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000174.png
+second image: 0000001787.png
+label: 0
+cosine metric for two images: -0.09585572
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001224.png
+second image: 0000000369.png
+label: 0
+cosine metric for two images: -0.13261707
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001605.png
+second image: 0000000131.png
+label: 0
+cosine metric for two images: 0.12324384
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001083.png
+second image: 0000000704.png
+label: 0
+cosine metric for two images: 0.14008287
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003416.png
+second image: 0000001470.png
+label: 0
+cosine metric for two images: -0.12226807
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000049.png
+second image: 0000002675.png
+label: 0
+cosine metric for two images: -0.15166467
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003392.png
+second image: 0000001115.png
+label: 0
+cosine metric for two images: -0.2097308
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002859.png
+second image: 0000000164.png
+label: 0
+cosine metric for two images: 0.14819106
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001270.png
+second image: 0000000395.png
+label: 0
+cosine metric for two images: -0.091129065
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001771.png
+second image: 0000003055.png
+label: 0
+cosine metric for two images: 0.20142362
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001550.png
+second image: 0000001084.png
+label: 0
+cosine metric for two images: -0.20123425
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003008.png
+second image: 0000000476.png
+label: 0
+cosine metric for two images: -0.071433865
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002424.png
+second image: 0000001454.png
+label: 0
+cosine metric for two images: 0.13872372
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000990.png
+second image: 0000001436.png
+label: 0
+cosine metric for two images: -0.09199403
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001404.png
+second image: 0000001323.png
+label: 0
+cosine metric for two images: 0.19602375
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001730.png
+second image: 0000000768.png
+label: 0
+cosine metric for two images: 0.018593216
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001000.png
+second image: 0000001282.png
+label: 0
+cosine metric for two images: -0.11906064
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002359.png
+second image: 0000003196.png
+label: 0
+cosine metric for two images: 0.023744287
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002846.png
+second image: 0000002074.png
+label: 0
+cosine metric for two images: 0.049062964
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000387.png
+second image: 0000001658.png
+label: 0
+cosine metric for two images: 0.09024801
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000176.png
+second image: 0000000659.png
+label: 0
+cosine metric for two images: 0.005784186
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003391.png
+second image: 0000002818.png
+label: 0
+cosine metric for two images: 0.09553445
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000162.png
+second image: 0000002874.png
+label: 0
+cosine metric for two images: -0.086786
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002569.png
+second image: 0000003447.png
+label: 0
+cosine metric for two images: -0.092312
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002105.png
+second image: 0000001736.png
+label: 0
+cosine metric for two images: 0.10696909
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002826.png
+second image: 0000002967.png
+label: 0
+cosine metric for two images: -0.019641481
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002584.png
+second image: 0000000542.png
+label: 0
+cosine metric for two images: -0.030635757
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000659.png
+second image: 0000003243.png
+label: 0
+cosine metric for two images: 0.017641706
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002415.png
+second image: 0000002224.png
+label: 0
+cosine metric for two images: 0.050321743
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000431.png
+second image: 0000001478.png
+label: 0
+cosine metric for two images: -0.15068285
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001974.png
+second image: 0000002632.png
+label: 0
+cosine metric for two images: 0.011241828
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001055.png
+second image: 0000002764.png
+label: 0
+cosine metric for two images: -0.15905647
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003543.png
+second image: 0000003063.png
+label: 0
+cosine metric for two images: -0.09542189
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001661.png
+second image: 0000000657.png
+label: 0
+cosine metric for two images: 0.115446374
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001506.png
+second image: 0000002663.png
+label: 0
+cosine metric for two images: 0.1566655
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000066.png
+second image: 0000003135.png
+label: 0
+cosine metric for two images: -0.07153358
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002338.png
+second image: 0000000409.png
+label: 0
+cosine metric for two images: -0.26716685
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002707.png
+second image: 0000001337.png
+label: 0
+cosine metric for two images: -0.06237983
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000111.png
+second image: 0000003194.png
+label: 0
+cosine metric for two images: -0.021200316
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000277.png
+second image: 0000002025.png
+label: 0
+cosine metric for two images: -0.07169996
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000912.png
+second image: 0000000792.png
+label: 0
+cosine metric for two images: 0.13542928
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003234.png
+second image: 0000000644.png
+label: 0
+cosine metric for two images: -0.014872962
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000957.png
+second image: 0000000126.png
+label: 0
+cosine metric for two images: 0.10760897
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001051.png
+second image: 0000000702.png
+label: 0
+cosine metric for two images: 0.05649246
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001893.png
+second image: 0000002195.png
+label: 0
+cosine metric for two images: 0.048579074
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001858.png
+second image: 0000000663.png
+label: 0
+cosine metric for two images: 0.06540126
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000402.png
+second image: 0000001512.png
+label: 0
+cosine metric for two images: 0.051012997
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000176.png
+second image: 0000003118.png
+label: 0
+cosine metric for two images: 0.005170794
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002274.png
+second image: 0000002176.png
+label: 0
+cosine metric for two images: 0.098293096
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002462.png
+second image: 0000000121.png
+label: 0
+cosine metric for two images: -0.024654975
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001976.png
+second image: 0000001084.png
+label: 0
+cosine metric for two images: 0.07085214
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001703.png
+second image: 0000001115.png
+label: 0
+cosine metric for two images: 0.031702004
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001216.png
+second image: 0000001196.png
+label: 0
+cosine metric for two images: 0.0600285
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003169.png
+second image: 0000000848.png
+label: 0
+cosine metric for two images: 0.08920884
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003014.png
+second image: 0000000960.png
+label: 0
+cosine metric for two images: 0.04373386
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002626.png
+second image: 0000001869.png
+label: 0
+cosine metric for two images: -0.08471773
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001898.png
+second image: 0000002747.png
+label: 0
+cosine metric for two images: 0.06901739
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002239.png
+second image: 0000000131.png
+label: 0
+cosine metric for two images: -0.10255824
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000088.png
+second image: 0000002212.png
+label: 0
+cosine metric for two images: 0.07396521
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001399.png
+second image: 0000000871.png
+label: 0
+cosine metric for two images: 0.014326936
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003465.png
+second image: 0000003317.png
+label: 0
+cosine metric for two images: 0.029464412
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002855.png
+second image: 0000003250.png
+label: 0
+cosine metric for two images: 0.009250053
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000867.png
+second image: 0000002172.png
+label: 0
+cosine metric for two images: -0.023163216
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001508.png
+second image: 0000000414.png
+label: 0
+cosine metric for two images: 0.01743476
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003063.png
+second image: 0000000987.png
+label: 0
+cosine metric for two images: -0.067816496
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002640.png
+second image: 0000002025.png
+label: 0
+cosine metric for two images: -0.07128008
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002078.png
+second image: 0000002764.png
+label: 0
+cosine metric for two images: 0.07988975
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001194.png
+second image: 0000001827.png
+label: 0
+cosine metric for two images: 0.04054748
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001249.png
+second image: 0000001448.png
+label: 0
+cosine metric for two images: -0.10617767
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003290.png
+second image: 0000000910.png
+label: 0
+cosine metric for two images: 0.02064723
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002924.png
+second image: 0000003404.png
+label: 0
+cosine metric for two images: -0.02481144
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001331.png
+second image: 0000002747.png
+label: 0
+cosine metric for two images: 0.1473312
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000945.png
+second image: 0000000268.png
+label: 0
+cosine metric for two images: -0.13176148
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001543.png
+second image: 0000002314.png
+label: 0
+cosine metric for two images: 0.073330164
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000453.png
+second image: 0000001499.png
+label: 0
+cosine metric for two images: -0.019623924
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001008.png
+second image: 0000001339.png
+label: 0
+cosine metric for two images: -0.09121617
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003509.png
+second image: 0000002373.png
+label: 0
+cosine metric for two images: -0.042435564
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001126.png
+second image: 0000001756.png
+label: 0
+cosine metric for two images: 0.14159387
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000567.png
+second image: 0000003374.png
+label: 0
+cosine metric for two images: 0.2744081
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000591.png
+second image: 0000002931.png
+label: 0
+cosine metric for two images: -0.07671598
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003151.png
+second image: 0000000539.png
+label: 0
+cosine metric for two images: -0.02843823
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001839.png
+second image: 0000000163.png
+label: 0
+cosine metric for two images: 0.20265955
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000834.png
+second image: 0000000970.png
+label: 0
+cosine metric for two images: -0.034510285
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003590.png
+second image: 0000002450.png
+label: 0
+cosine metric for two images: -0.19122101
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000931.png
+second image: 0000002597.png
+label: 0
+cosine metric for two images: 0.006832974
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000343.png
+second image: 0000003169.png
+label: 0
+cosine metric for two images: -0.08069875
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002564.png
+second image: 0000002238.png
+label: 0
+cosine metric for two images: 0.081458494
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001940.png
+second image: 0000002273.png
+label: 0
+cosine metric for two images: 0.14066896
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001151.png
+second image: 0000001994.png
+label: 0
+cosine metric for two images: 0.021963634
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001244.png
+second image: 0000001609.png
+label: 0
+cosine metric for two images: 0.19619016
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002763.png
+second image: 0000000746.png
+label: 0
+cosine metric for two images: -0.04869897
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002136.png
+second image: 0000000417.png
+label: 0
+cosine metric for two images: 0.08927911
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002735.png
+second image: 0000000433.png
+label: 0
+cosine metric for two images: 0.07665171
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001858.png
+second image: 0000001676.png
+label: 0
+cosine metric for two images: 0.22762713
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001581.png
+second image: 0000000024.png
+label: 0
+cosine metric for two images: 0.20135535
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002685.png
+second image: 0000000943.png
+label: 0
+cosine metric for two images: -0.019059122
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000058.png
+second image: 0000000987.png
+label: 0
+cosine metric for two images: -0.12657389
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002678.png
+second image: 0000000893.png
+label: 0
+cosine metric for two images: -0.22556415
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002788.png
+second image: 0000000139.png
+label: 0
+cosine metric for two images: 0.15797833
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000504.png
+second image: 0000001347.png
+label: 0
+cosine metric for two images: 0.119512096
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000539.png
+second image: 0000000453.png
+label: 0
+cosine metric for two images: -0.17794423
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000212.png
+second image: 0000000742.png
+label: 0
+cosine metric for two images: -0.12899658
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000045.png
+second image: 0000001229.png
+label: 0
+cosine metric for two images: 0.068266355
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003330.png
+second image: 0000001513.png
+label: 0
+cosine metric for two images: 0.0142791
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001427.png
+second image: 0000001270.png
+label: 0
+cosine metric for two images: -0.18643901
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000822.png
+second image: 0000001955.png
+label: 0
+cosine metric for two images: -0.08434289
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002107.png
+second image: 0000002555.png
+label: 0
+cosine metric for two images: -0.13155814
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000163.png
+second image: 0000000686.png
+label: 0
+cosine metric for two images: -0.011707615
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000833.png
+second image: 0000003437.png
+label: 0
+cosine metric for two images: -0.11594415
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002747.png
+second image: 0000000657.png
+label: 0
+cosine metric for two images: -0.02806371
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001422.png
+second image: 0000000659.png
+label: 0
+cosine metric for two images: 0.053000655
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002896.png
+second image: 0000002730.png
+label: 0
+cosine metric for two images: -0.058504757
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001315.png
+second image: 0000000364.png
+label: 0
+cosine metric for two images: 0.080669284
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001586.png
+second image: 0000000553.png
+label: 0
+cosine metric for two images: -0.060047302
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002714.png
+second image: 0000001218.png
+label: 0
+cosine metric for two images: 0.084840074
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002840.png
+second image: 0000001413.png
+label: 0
+cosine metric for two images: -0.13049215
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001271.png
+second image: 0000002462.png
+label: 0
+cosine metric for two images: 0.14584728
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000802.png
+second image: 0000001741.png
+label: 0
+cosine metric for two images: 0.22572748
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003238.png
+second image: 0000000547.png
+label: 0
+cosine metric for two images: 0.06050414
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003054.png
+second image: 0000001594.png
+label: 0
+cosine metric for two images: 0.019323656
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000609.png
+second image: 0000003194.png
+label: 0
+cosine metric for two images: -0.13336866
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002997.png
+second image: 0000002842.png
+label: 0
+cosine metric for two images: 0.00034474977
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000704.png
+second image: 0000001728.png
+label: 0
+cosine metric for two images: -0.2334367
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001495.png
+second image: 0000003151.png
+label: 0
+cosine metric for two images: 0.049226884
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002325.png
+second image: 0000002678.png
+label: 0
+cosine metric for two images: 0.022441039
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001099.png
+second image: 0000002709.png
+label: 0
+cosine metric for two images: -0.021141382
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000907.png
+second image: 0000000662.png
+label: 0
+cosine metric for two images: 0.028206307
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000337.png
+second image: 0000002225.png
+label: 0
+cosine metric for two images: 0.16968128
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002150.png
+second image: 0000001913.png
+label: 0
+cosine metric for two images: 0.06353538
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002597.png
+second image: 0000002539.png
+label: 0
+cosine metric for two images: -0.04893848
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000961.png
+second image: 0000002217.png
+label: 0
+cosine metric for two images: 0.08988683
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000164.png
+second image: 0000003369.png
+label: 0
+cosine metric for two images: -0.00092656625
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002756.png
+second image: 0000002952.png
+label: 0
+cosine metric for two images: 0.045322232
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003368.png
+second image: 0000003042.png
+label: 0
+cosine metric for two images: 0.0058826287
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001774.png
+second image: 0000000547.png
+label: 0
+cosine metric for two images: -0.23602694
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000369.png
+second image: 0000000849.png
+label: 0
+cosine metric for two images: 0.05267814
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002994.png
+second image: 0000003314.png
+label: 0
+cosine metric for two images: 0.20789702
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000746.png
+second image: 0000002942.png
+label: 0
+cosine metric for two images: -0.047761902
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001035.png
+second image: 0000001375.png
+label: 0
+cosine metric for two images: 0.013926944
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000504.png
+second image: 0000003140.png
+label: 0
+cosine metric for two images: -0.027356872
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002675.png
+second image: 0000000569.png
+label: 0
+cosine metric for two images: -0.027169533
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003163.png
+second image: 0000003509.png
+label: 0
+cosine metric for two images: -0.044101965
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003076.png
+second image: 0000000136.png
+label: 0
+cosine metric for two images: 0.06123613
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003285.png
+second image: 0000003151.png
+label: 0
+cosine metric for two images: -0.12028846
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002137.png
+second image: 0000000036.png
+label: 0
+cosine metric for two images: 0.020181425
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002870.png
+second image: 0000002161.png
+label: 0
+cosine metric for two images: 0.1262392
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001657.png
+second image: 0000001223.png
+label: 0
+cosine metric for two images: -0.14822213
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001619.png
+second image: 0000001377.png
+label: 0
+cosine metric for two images: 0.05526295
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000547.png
+second image: 0000000471.png
+label: 0
+cosine metric for two images: 0.19404589
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003510.png
+second image: 0000000483.png
+label: 0
+cosine metric for two images: 0.023448763
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001099.png
+second image: 0000000387.png
+label: 0
+cosine metric for two images: -0.032658514
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002172.png
+second image: 0000003292.png
+label: 0
+cosine metric for two images: -0.08087546
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000077.png
+second image: 0000000943.png
+label: 0
+cosine metric for two images: 0.25420517
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002202.png
+second image: 0000002288.png
+label: 0
+cosine metric for two images: -0.07211897
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000522.png
+second image: 0000002640.png
+label: 0
+cosine metric for two images: 0.22391705
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003457.png
+second image: 0000002410.png
+label: 0
+cosine metric for two images: -0.08105451
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002408.png
+second image: 0000001924.png
+label: 0
+cosine metric for two images: 0.09106683
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000637.png
+second image: 0000001495.png
+label: 0
+cosine metric for two images: 0.23463626
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001192.png
+second image: 0000002604.png
+label: 0
+cosine metric for two images: 0.11676814
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000095.png
+second image: 0000003085.png
+label: 0
+cosine metric for two images: -0.028074421
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001665.png
+second image: 0000002141.png
+label: 0
+cosine metric for two images: 0.01195417
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000885.png
+second image: 0000002213.png
+label: 0
+cosine metric for two images: 0.07447422
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002288.png
+second image: 0000002176.png
+label: 0
+cosine metric for two images: 0.0003250397
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000177.png
+second image: 0000001196.png
+label: 0
+cosine metric for two images: -0.04492813
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000163.png
+second image: 0000003447.png
+label: 0
+cosine metric for two images: 0.00030012158
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002122.png
+second image: 0000000561.png
+label: 0
+cosine metric for two images: -0.18044342
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002014.png
+second image: 0000001444.png
+label: 0
+cosine metric for two images: -0.07088437
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000010.png
+second image: 0000000572.png
+label: 0
+cosine metric for two images: -0.015222919
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001776.png
+second image: 0000002789.png
+label: 0
+cosine metric for two images: -0.062648095
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001418.png
+second image: 0000000746.png
+label: 0
+cosine metric for two images: -0.08382544
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003037.png
+second image: 0000002038.png
+label: 0
+cosine metric for two images: 0.15001938
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000136.png
+second image: 0000000633.png
+label: 0
+cosine metric for two images: 0.20414375
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001246.png
+second image: 0000001551.png
+label: 0
+cosine metric for two images: -0.17663454
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001143.png
+second image: 0000003131.png
+label: 0
+cosine metric for two images: -0.10633692
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001706.png
+second image: 0000000467.png
+label: 0
+cosine metric for two images: 0.2790637
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001256.png
+second image: 0000003081.png
+label: 0
+cosine metric for two images: 0.08598722
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003221.png
+second image: 0000002477.png
+label: 0
+cosine metric for two images: -0.024673255
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001292.png
+second image: 0000000231.png
+label: 0
+cosine metric for two images: 0.092260055
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000528.png
+second image: 0000002105.png
+label: 0
+cosine metric for two images: 0.008906133
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000767.png
+second image: 0000002633.png
+label: 0
+cosine metric for two images: 0.10882979
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002141.png
+second image: 0000001910.png
+label: 0
+cosine metric for two images: -0.050959304
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001029.png
+second image: 0000001046.png
+label: 0
+cosine metric for two images: -0.04617866
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002559.png
+second image: 0000001071.png
+label: 0
+cosine metric for two images: 0.10041952
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000003140.png
+second image: 0000002614.png
+label: 0
+cosine metric for two images: 0.111324266
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000023.png
+second image: 0000001605.png
+label: 0
+cosine metric for two images: -0.015253372
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002811.png
+second image: 0000001339.png
+label: 0
+cosine metric for two images: 0.12413221
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002074.png
+second image: 0000002984.png
+label: 0
+cosine metric for two images: -0.08585135
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001676.png
+second image: 0000002581.png
+label: 0
+cosine metric for two images: 0.006397515
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002362.png
+second image: 0000000121.png
+label: 0
+cosine metric for two images: -0.039215855
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001055.png
+second image: 0000000007.png
+label: 0
+cosine metric for two images: 0.025885401
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001567.png
+second image: 0000003383.png
+label: 0
+cosine metric for two images: -0.055308163
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001473.png
+second image: 0000001016.png
+label: 0
+cosine metric for two images: -0.030315617
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002245.png
+second image: 0000001728.png
+label: 0
+cosine metric for two images: -0.06220046
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000096.png
+second image: 0000001068.png
+label: 0
+cosine metric for two images: -0.098995715
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002627.png
+second image: 0000000467.png
+label: 0
+cosine metric for two images: -0.0014407105
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000002079.png
+second image: 0000002576.png
+label: 0
+cosine metric for two images: 0.1316977
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000000742.png
+second image: 0000001531.png
+label: 0
+cosine metric for two images: -0.09669991
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001565.png
+second image: 0000000493.png
+label: 0
+cosine metric for two images: 0.03722828
+[Sat Mar 27 15:03:49 2021] =====
+first image: 0000001029.png
+second image: 0000003076.png
+label: 0
+cosine metric for two images: -0.17763749
+[Sat Mar 27 15:03:49 2021] zum face verification accuracy:  0.875 threshold:  0.15187982
