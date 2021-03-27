@@ -6,4 +6,3 @@ RUN apt-get -y install cmake
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements_for_docker.txt
-CMD ["python", "test.py"]
