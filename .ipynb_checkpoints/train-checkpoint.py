@@ -42,11 +42,11 @@ if __name__ == '__main__':
     
     parser.add_argument('--root', default="/home/kbj/projects/ZUMDATA/total")
     
-    parser.add_argument('--total_list', default="/home/kbj/projects/ZUMDATA/real_total.txt")
-    parser.add_argument('--train_list', default="/home/kbj/projects/ZUMDATA/real_train.txt")
-    parser.add_argument('--val_list', default="/home/kbj/projects/ZUMDATA/real_val.txt")
-    parser.add_argument('--test_list', default="/home/kbj/projects/ZUMDATA/real_test.txt")
-    parser.add_argument('--zum_test_list', default="/home/kbj/projects/ZUMDATA/real_pair.txt")
+    parser.add_argument('--total_list', default="/home/kbj/projects/ZUMDATA/total.txt")
+    parser.add_argument('--train_list', default="/home/kbj/projects/ZUMDATA/train.txt")
+    parser.add_argument('--val_list', default="/home/kbj/projects/ZUMDATA/val.txt")
+    parser.add_argument('--test_list', default="/home/kbj/projects/ZUMDATA/test.txt")
+    parser.add_argument('--zum_test_list', default="/home/kbj/projects/ZUMDATA/pair.txt")
     
     parser.add_argument('--checkpoints_path', default="checkpoints")
     
