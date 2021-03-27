@@ -149,10 +149,10 @@ def zum_test(model, img_paths, input_shape, identity_list, compair_list, batch_s
     s = time.time()
     features, cnt = get_featurs(model, img_paths, input_shape, batch_size=batch_size)
     t = time.time() - s
-    print('total time is {}, average time is {}'.format(t, t / cnt))
+    print('[{}] total time is {}, average time is {}'.format(time.strftime('%c', time.localtime(time.time())), t, t / cnt))
     fe_dict = get_feature_dict(identity_list, features)
     acc, th = test_performance(fe_dict, compair_list)
-    print('zum face verification accuracy: ', acc, 'threshold: ', th)
+    print("[{}]".format(time.strftime('%c', time.localtime(time.time()))), 'zum face verification accuracy: ', acc, 'threshold: ', th)
     return acc
 
 

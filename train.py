@@ -26,8 +26,12 @@ def save_model(model, save_path, name, iter_cnt):
 
 
 if __name__ == '__main__':
-
     opt = Config()
+
+    torch.manual_seed(opt.random_seed)
+    np.random.seed(opt.random_seed)
+    random.seed(opt.random_seed)
+
     os.environ["CUDA_VISIBLE_DEVICES"] = opt.gpu_id
     device = torch.device("cuda")
 
@@ -40,7 +44,7 @@ if __name__ == '__main__':
     identity_list = get_zum_list(opt.zum_test_list)
     img_paths = [os.path.join(opt.root, each) for each in identity_list]
 
-    print('{} train iters per epoch:'.format(len(trainloader)))
+    print('[{}] {} train iters per epoch:'.format(time.strftime('%c', time.localtime(time.time())), len(trainloader)))
 
     criterion = FocalLoss(gamma=2)
     # criterion = torch.nn.CrossEntropyLoss()
@@ -53,7 +57,8 @@ if __name__ == '__main__':
         exit
 
     metric_fc = ArcMarginProduct(512, opt.num_classes, s=30, m=0.5, easy_margin=opt.easy_margin)
-    
+
+    print("[{}]".format(time.strftime('%c', time.localtime(time.time()))))
     print(model)
 
     model.to(device)
@@ -93,7 +98,7 @@ if __name__ == '__main__':
                 acc = np.mean((output == label).astype(int))
                 speed = opt.print_freq / (time.time() - start)
                 time_str = time.asctime(time.localtime(time.time()))
-                print('{} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time_str, i, iters, speed, loss.item(), acc))
+                print('[{}] {} train epoch {} iter {} {} iters/s loss {} acc {}'.format(time.strftime('%c', time.localtime(time.time())), time_str, i, iters, speed, loss.item(), acc))
 
                 start = time.time()
 

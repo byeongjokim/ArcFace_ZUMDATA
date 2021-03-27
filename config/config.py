@@ -1,4 +1,5 @@
 class Config(object):
+    random_seed = 0
     backbone = 'resnet50'
     
     num_classes = 200

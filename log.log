@@ -1,0 +1,605 @@
+[Sat Mar 27 12:13:24 2021] 38 train iters per epoch:
+[Sat Mar 27 12:13:24 2021]
+SEResNet_IR(
+  (input_layer): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): PReLU(num_parameters=64)
+  )
+  (output_layer): Sequential(
+    (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (1): Dropout(p=0.4, inplace=False)
+    (2): Flatten()
+    (3): Linear(in_features=25088, out_features=512, bias=True)
+    (4): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (body): Sequential(
+    (0): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=2, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=64)
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(64, 4, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(4, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (1): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=64)
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(64, 4, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(4, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (2): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=64)
+        (4): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(64, 4, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(4, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (3): BottleNeck_IR_SE(
+      (shortcut_layer): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (res_layer): Sequential(
+        (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=128)
+        (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(128, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(8, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (4): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=128)
+        (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(128, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(8, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (5): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=128)
+        (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(128, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(8, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (6): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=128)
+        (4): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(128, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(8, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (7): BottleNeck_IR_SE(
+      (shortcut_layer): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (res_layer): Sequential(
+        (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (8): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (9): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (10): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (11): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (12): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (13): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (14): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (15): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (16): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (17): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (18): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (19): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (20): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=256)
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(256, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(16, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (21): BottleNeck_IR_SE(
+      (shortcut_layer): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (res_layer): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=512)
+        (4): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (22): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=512)
+        (4): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+    (23): BottleNeck_IR_SE(
+      (shortcut_layer): MaxPool2d(kernel_size=1, stride=1, padding=0, dilation=1, ceil_mode=False)
+      (res_layer): Sequential(
+        (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): PReLU(num_parameters=512)
+        (4): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (5): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (6): SEModule(
+          (avg_pool): AdaptiveAvgPool2d(output_size=1)
+          (fc1): Conv2d(512, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (relu): ReLU(inplace=True)
+          (fc2): Conv2d(32, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (sigmoid): Sigmoid()
+        )
+      )
+    )
+  )
+)
+[Sat Mar 27 12:13:27 2021] Sat Mar 27 12:13:27 2021 train epoch 0 iter 0 138.3596628676046 iters/s loss 20.595518112182617 acc 0.0
+[Sat Mar 27 12:13:45 2021] total time is 4.02747654914856, average time is 0.08755383802496869
+[Sat Mar 27 12:13:45 2021] zum face verification accuracy:  0.66 threshold:  0.79751426
+[Sat Mar 27 12:14:04 2021] total time is 3.940383195877075, average time is 0.08566050425819728
+[Sat Mar 27 12:14:04 2021] zum face verification accuracy:  0.7 threshold:  0.57272756
+[Sat Mar 27 12:14:14 2021] Sat Mar 27 12:14:14 2021 train epoch 2 iter 100 2.123720271526869 iters/s loss 15.841511726379395 acc 0.015625
+[Sat Mar 27 12:14:23 2021] total time is 4.032889127731323, average time is 0.0876715027767679
+[Sat Mar 27 12:14:23 2021] zum face verification accuracy:  0.7366666666666667 threshold:  0.35085878
+[Sat Mar 27 12:14:42 2021] total time is 4.102887392044067, average time is 0.08919320417487103
+[Sat Mar 27 12:14:42 2021] zum face verification accuracy:  0.7483333333333333 threshold:  0.36987
+[Sat Mar 27 12:15:01 2021] total time is 4.088479042053223, average time is 0.08887997917507005
+[Sat Mar 27 12:15:01 2021] zum face verification accuracy:  0.76 threshold:  0.24282792
+[Sat Mar 27 12:15:05 2021] Sat Mar 27 12:15:05 2021 train epoch 5 iter 200 1.947029267791429 iters/s loss 9.007523536682129 acc 0.15625
+[Sat Mar 27 12:15:20 2021] total time is 3.9762320518493652, average time is 0.08643982721411664
+[Sat Mar 27 12:15:20 2021] zum face verification accuracy:  0.775 threshold:  0.2050829
+[Sat Mar 27 12:15:39 2021] total time is 4.070035219192505, average time is 0.08847902650418489
+[Sat Mar 27 12:15:39 2021] zum face verification accuracy:  0.7933333333333333 threshold:  0.21991473
+[Sat Mar 27 12:15:53 2021] Sat Mar 27 12:15:53 2021 train epoch 7 iter 300 2.1171219753301087 iters/s loss 6.162257671356201 acc 0.375
+[Sat Mar 27 12:15:58 2021] total time is 4.161035776138306, average time is 0.09045729948126752
+[Sat Mar 27 12:15:58 2021] zum face verification accuracy:  0.7666666666666667 threshold:  0.25382993
+[Sat Mar 27 12:16:17 2021] total time is 4.019303321838379, average time is 0.08737615917039954
+[Sat Mar 27 12:16:17 2021] zum face verification accuracy:  0.8033333333333333 threshold:  0.20110454
+[Sat Mar 27 12:16:36 2021] total time is 4.012436628341675, average time is 0.08722688322481902
+[Sat Mar 27 12:16:36 2021] zum face verification accuracy:  0.8283333333333334 threshold:  0.16210388
+[Sat Mar 27 12:16:44 2021] Sat Mar 27 12:16:44 2021 train epoch 10 iter 400 1.9429914628067095 iters/s loss 4.693652629852295 acc 0.46875
+[Sat Mar 27 12:16:55 2021] total time is 4.01519513130188, average time is 0.08728685068047565
+[Sat Mar 27 12:16:55 2021] zum face verification accuracy:  0.845 threshold:  0.16610216
+[Sat Mar 27 12:17:14 2021] total time is 4.002218723297119, average time is 0.0870047548542852
+[Sat Mar 27 12:17:14 2021] zum face verification accuracy:  0.8466666666666667 threshold:  0.13340347
+[Sat Mar 27 12:17:33 2021] total time is 4.163884401321411, average time is 0.09051922611568285
+[Sat Mar 27 12:17:33 2021] zum face verification accuracy:  0.8416666666666667 threshold:  0.11561157
+[Sat Mar 27 12:17:36 2021] Sat Mar 27 12:17:36 2021 train epoch 13 iter 500 1.9284884980159849 iters/s loss 4.259584426879883 acc 0.40625
+[Sat Mar 27 12:17:52 2021] total time is 4.108136892318726, average time is 0.08930732374605925
+[Sat Mar 27 12:17:52 2021] zum face verification accuracy:  0.8333333333333334 threshold:  0.18769594
+[Sat Mar 27 12:18:11 2021] total time is 4.161273717880249, average time is 0.0904624721278315
+[Sat Mar 27 12:18:11 2021] zum face verification accuracy:  0.8466666666666667 threshold:  0.15137728
+[Sat Mar 27 12:18:23 2021] Sat Mar 27 12:18:23 2021 train epoch 15 iter 600 2.1007267015917637 iters/s loss 2.779897451400757 acc 0.515625
+[Sat Mar 27 12:18:30 2021] total time is 4.052095651626587, average time is 0.0880890359049258
+[Sat Mar 27 12:18:30 2021] zum face verification accuracy:  0.8433333333333334 threshold:  0.16204585
+[Sat Mar 27 12:18:49 2021] total time is 4.228282928466797, average time is 0.09191919409710428
+[Sat Mar 27 12:18:49 2021] zum face verification accuracy:  0.855 threshold:  0.14782286
+[Sat Mar 27 12:19:09 2021] total time is 4.2689948081970215, average time is 0.09280423496080481
+[Sat Mar 27 12:19:09 2021] zum face verification accuracy:  0.865 threshold:  0.14987798
+[Sat Mar 27 12:19:16 2021] Sat Mar 27 12:19:16 2021 train epoch 18 iter 700 1.918025840529677 iters/s loss 1.3903957605361938 acc 0.609375
+[Sat Mar 27 12:19:28 2021] total time is 4.128369569778442, average time is 0.08974716456040092
+[Sat Mar 27 12:19:28 2021] zum face verification accuracy:  0.85 threshold:  0.1745289
+[Sat Mar 27 12:19:47 2021] total time is 4.072973966598511, average time is 0.08854291231735893
+[Sat Mar 27 12:19:47 2021] zum face verification accuracy:  0.8616666666666667 threshold:  0.13889766
+[Sat Mar 27 12:20:06 2021] total time is 4.04050874710083, average time is 0.087837146676105
+[Sat Mar 27 12:20:06 2021] zum face verification accuracy:  0.8666666666666667 threshold:  0.1547377
+[Sat Mar 27 12:20:08 2021] Sat Mar 27 12:20:08 2021 train epoch 21 iter 800 1.919692970980154 iters/s loss 1.552245020866394 acc 0.671875
+[Sat Mar 27 12:20:25 2021] total time is 4.07697319984436, average time is 0.08862985217052957
+[Sat Mar 27 12:20:25 2021] zum face verification accuracy:  0.8616666666666667 threshold:  0.13432235
+[Sat Mar 27 12:20:44 2021] total time is 4.082490921020508, average time is 0.0887498026308806
+[Sat Mar 27 12:20:44 2021] zum face verification accuracy:  0.8683333333333333 threshold:  0.14319326
+[Sat Mar 27 12:20:55 2021] Sat Mar 27 12:20:55 2021 train epoch 23 iter 900 2.1032762672530807 iters/s loss 0.6471301317214966 acc 0.75
+[Sat Mar 27 12:21:03 2021] total time is 4.072595119476318, average time is 0.08853467651035475
+[Sat Mar 27 12:21:03 2021] zum face verification accuracy:  0.865 threshold:  0.16202265
+[Sat Mar 27 12:21:23 2021] total time is 4.172243118286133, average time is 0.09070093735404637
+[Sat Mar 27 12:21:23 2021] zum face verification accuracy:  0.8683333333333333 threshold:  0.16839157
+[Sat Mar 27 12:21:42 2021] total time is 4.125504732131958, average time is 0.08968488548112952
+[Sat Mar 27 12:21:42 2021] zum face verification accuracy:  0.8683333333333333 threshold:  0.16072142
+[Sat Mar 27 12:21:47 2021] Sat Mar 27 12:21:47 2021 train epoch 26 iter 1000 1.9308422881393341 iters/s loss 1.3881831169128418 acc 0.625
+[Sat Mar 27 12:22:01 2021] total time is 4.055062294006348, average time is 0.08815352813057277
+[Sat Mar 27 12:22:01 2021] zum face verification accuracy:  0.8666666666666667 threshold:  0.15680228
+[Sat Mar 27 12:22:20 2021] total time is 4.161279916763306, average time is 0.09046260688615881
+[Sat Mar 27 12:22:20 2021] zum face verification accuracy:  0.87 threshold:  0.15464436
+[Sat Mar 27 12:22:35 2021] Sat Mar 27 12:22:35 2021 train epoch 28 iter 1100 2.101574658790692 iters/s loss 0.9183555841445923 acc 0.765625
+[Sat Mar 27 12:22:39 2021] total time is 4.015411853790283, average time is 0.0872915620389192
+[Sat Mar 27 12:22:39 2021] zum face verification accuracy:  0.865 threshold:  0.1495906
+[Sat Mar 27 12:22:58 2021] total time is 4.008865833282471, average time is 0.0871492572452711
+[Sat Mar 27 12:22:58 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.1469368
+[Sat Mar 27 12:23:17 2021] total time is 4.167837381362915, average time is 0.0906051604644112
+[Sat Mar 27 12:23:17 2021] zum face verification accuracy:  0.875 threshold:  0.15570562
+[Sat Mar 27 12:23:27 2021] Sat Mar 27 12:23:27 2021 train epoch 31 iter 1200 1.9243472082826636 iters/s loss 0.9900716543197632 acc 0.71875
+[Sat Mar 27 12:23:36 2021] total time is 3.984473705291748, average time is 0.08661899359329887
+[Sat Mar 27 12:23:36 2021] zum face verification accuracy:  0.875 threshold:  0.15907823
+[Sat Mar 27 12:23:55 2021] total time is 4.0489678382873535, average time is 0.08802103996276855
+[Sat Mar 27 12:23:55 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.14586747
+[Sat Mar 27 12:24:14 2021] total time is 4.051136016845703, average time is 0.08806817427925441
+[Sat Mar 27 12:24:14 2021] zum face verification accuracy:  0.8683333333333333 threshold:  0.13626315
+[Sat Mar 27 12:24:18 2021] Sat Mar 27 12:24:18 2021 train epoch 34 iter 1300 1.9421250347637873 iters/s loss 0.6695297360420227 acc 0.71875
+[Sat Mar 27 12:24:33 2021] total time is 4.085734128952026, average time is 0.08882030715113101
+[Sat Mar 27 12:24:33 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.15408137
+[Sat Mar 27 12:24:52 2021] total time is 4.140684604644775, average time is 0.09001488270966904
+[Sat Mar 27 12:24:52 2021] zum face verification accuracy:  0.87 threshold:  0.15158479
+[Sat Mar 27 12:25:06 2021] Sat Mar 27 12:25:06 2021 train epoch 36 iter 1400 2.1004643798153593 iters/s loss 1.2071614265441895 acc 0.71875
+[Sat Mar 27 12:25:11 2021] total time is 4.066474914550781, average time is 0.0884016285771909
+[Sat Mar 27 12:25:12 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.15746851
+[Sat Mar 27 12:25:31 2021] total time is 4.064858436584473, average time is 0.08836648775183636
+[Sat Mar 27 12:25:31 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.15443611
+[Sat Mar 27 12:25:50 2021] total time is 4.032557487487793, average time is 0.08766429320625636
+[Sat Mar 27 12:25:50 2021] zum face verification accuracy:  0.8766666666666667 threshold:  0.15758315
+[Sat Mar 27 12:25:57 2021] Sat Mar 27 12:25:57 2021 train epoch 39 iter 1500 1.938547918577497 iters/s loss 0.4190572202205658 acc 0.828125
+[Sat Mar 27 12:26:09 2021] total time is 4.130462408065796, average time is 0.0897926610449086
+[Sat Mar 27 12:26:09 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.15299724
+[Sat Mar 27 12:26:28 2021] total time is 3.9920785427093506, average time is 0.08678431614585545
+[Sat Mar 27 12:26:28 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.15593931
+[Sat Mar 27 12:26:47 2021] total time is 4.161108493804932, average time is 0.09045888030010721
+[Sat Mar 27 12:26:47 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.15134166
+[Sat Mar 27 12:26:49 2021] Sat Mar 27 12:26:49 2021 train epoch 42 iter 1600 1.9210897265392322 iters/s loss 0.3468836843967438 acc 0.84375
+[Sat Mar 27 12:27:06 2021] total time is 4.084070444107056, average time is 0.08878414008928381
+[Sat Mar 27 12:27:06 2021] zum face verification accuracy:  0.87 threshold:  0.14883673
+[Sat Mar 27 12:27:25 2021] total time is 4.06956934928894, average time is 0.08846889889758566
+[Sat Mar 27 12:27:25 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.15429358
+[Sat Mar 27 12:27:37 2021] Sat Mar 27 12:27:37 2021 train epoch 44 iter 1700 2.1064469605191607 iters/s loss 0.8619208931922913 acc 0.78125
+[Sat Mar 27 12:27:44 2021] total time is 4.074862003326416, average time is 0.08858395659405252
+[Sat Mar 27 12:27:44 2021] zum face verification accuracy:  0.87 threshold:  0.15954411
+[Sat Mar 27 12:28:03 2021] total time is 4.041597843170166, average time is 0.0878608226776123
+[Sat Mar 27 12:28:03 2021] zum face verification accuracy:  0.875 threshold:  0.15608731
+[Sat Mar 27 12:28:22 2021] total time is 4.157498121261597, average time is 0.0903803939404695
+[Sat Mar 27 12:28:22 2021] zum face verification accuracy:  0.875 threshold:  0.15507616
+[Sat Mar 27 12:28:28 2021] Sat Mar 27 12:28:28 2021 train epoch 47 iter 1800 1.937700773567959 iters/s loss 0.7210274338722229 acc 0.75
+[Sat Mar 27 12:28:41 2021] total time is 4.182928800582886, average time is 0.09093323479528012
+[Sat Mar 27 12:28:41 2021] zum face verification accuracy:  0.875 threshold:  0.15934762
+[Sat Mar 27 12:29:00 2021] total time is 4.185129880905151, average time is 0.0909810843675033
+[Sat Mar 27 12:29:01 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.15786691
+[Sat Mar 27 12:29:20 2021] total time is 4.181780815124512, average time is 0.0909082785896633
+[Sat Mar 27 12:29:20 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.14816679
+[Sat Mar 27 12:29:20 2021] Sat Mar 27 12:29:20 2021 train epoch 50 iter 1900 1.9276010501364542 iters/s loss 0.4559677541255951 acc 0.796875
+[Sat Mar 27 12:29:39 2021] total time is 4.021613121032715, average time is 0.08742637219636337
+[Sat Mar 27 12:29:39 2021] zum face verification accuracy:  0.875 threshold:  0.15187982
+[Sat Mar 27 12:29:58 2021] total time is 4.086420059204102, average time is 0.08883521867835004
+[Sat Mar 27 12:29:58 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.1465399
+[Sat Mar 27 12:30:08 2021] Sat Mar 27 12:30:08 2021 train epoch 52 iter 2000 2.09805580047773 iters/s loss 0.15472851693630219 acc 0.90625
+[Sat Mar 27 12:30:17 2021] total time is 4.052988767623901, average time is 0.08810845147008481
+[Sat Mar 27 12:30:17 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.14663123
+[Sat Mar 27 12:30:36 2021] total time is 4.130346059799194, average time is 0.08979013173476509
+[Sat Mar 27 12:30:36 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.14843766
+[Sat Mar 27 12:30:55 2021] total time is 4.164766073226929, average time is 0.09053839289623758
+[Sat Mar 27 12:30:55 2021] zum face verification accuracy:  0.87 threshold:  0.16211376
+[Sat Mar 27 12:31:00 2021] Sat Mar 27 12:31:00 2021 train epoch 55 iter 2100 1.9341738678755254 iters/s loss 0.4153030514717102 acc 0.859375
+[Sat Mar 27 12:31:14 2021] total time is 4.104851961135864, average time is 0.08923591219860574
+[Sat Mar 27 12:31:14 2021] zum face verification accuracy:  0.8766666666666667 threshold:  0.15766354
+[Sat Mar 27 12:31:33 2021] total time is 4.0755345821380615, average time is 0.08859857787256656
+[Sat Mar 27 12:31:33 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.1461382
+[Sat Mar 27 12:31:47 2021] Sat Mar 27 12:31:47 2021 train epoch 57 iter 2200 2.105337584107072 iters/s loss 0.230934739112854 acc 0.875
+[Sat Mar 27 12:31:52 2021] total time is 4.162935256958008, average time is 0.09049859254256538
+[Sat Mar 27 12:31:52 2021] zum face verification accuracy:  0.875 threshold:  0.1534897
+[Sat Mar 27 12:32:11 2021] total time is 4.047488212585449, average time is 0.0879888741866402
+[Sat Mar 27 12:32:11 2021] zum face verification accuracy:  0.8716666666666667 threshold:  0.16254784
+[Sat Mar 27 12:32:30 2021] total time is 4.0547802448272705, average time is 0.0881473966266798
+[Sat Mar 27 12:32:30 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.153418
+[Sat Mar 27 12:32:39 2021] Sat Mar 27 12:32:39 2021 train epoch 60 iter 2300 1.9338728524374673 iters/s loss 0.5735526084899902 acc 0.84375
+[Sat Mar 27 12:32:50 2021] total time is 4.124203681945801, average time is 0.08965660178143045
+[Sat Mar 27 12:32:50 2021] zum face verification accuracy:  0.8733333333333333 threshold:  0.15908095
