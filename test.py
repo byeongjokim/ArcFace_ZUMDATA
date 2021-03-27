@@ -189,7 +189,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_batch_size', default=64, type=int)
     parser.add_argument('--test_batch_size', default=32, type=int)
     
-    parser.add_argument('--use_gpu', action='store_true')
+    parser.add_argument('--use_gpu', action='store_true', default=True)
     parser.add_argument('--gpu_id', default="1")
     parser.add_argument('--num_workers', default=4, type=int)
     
