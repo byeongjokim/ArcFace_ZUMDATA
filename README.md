@@ -54,7 +54,7 @@ $python train.py [options]
 
 ## Test
 ```
-$python test.py [options]
+$python test_only.py [options]
 ```
 
 ## Results (Verification Accuracy)
