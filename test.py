@@ -167,8 +167,8 @@ if __name__ == '__main__':
     parser.add_argument('--use_se', action='store_true')
     parser.add_argument('--optimizer', default="sgd")
     
-    parser.add_argument('--inf_root', default="/")
-    parser.add_argument('--inf_json', default="/home/kbj/projects/ZUMDATA/inf/people/OBS")
+    parser.add_argument('--data_root', default="/")
+    parser.add_argument('--data_json', default="/home/kbj/projects/ZUMDATA/inf/people/OBS")
     
     parser.add_argument('--root', default="/home/kbj/projects/ZUMDATA/total")
     
