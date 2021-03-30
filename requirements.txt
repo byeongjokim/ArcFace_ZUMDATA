@@ -1,4 +1,5 @@
 mtcnn==0.0.9
+tensorflow==1.14.0
 opencv-python==4.4.0.40
 dlib==19.19.0
 numpy==1.18.2
